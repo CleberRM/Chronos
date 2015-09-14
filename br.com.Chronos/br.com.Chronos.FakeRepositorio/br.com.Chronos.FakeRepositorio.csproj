@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositorioFake.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\br.com.Chronos.Entidade\br.com.Chronos.Entidade.csproj">
