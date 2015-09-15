@@ -65,7 +65,6 @@ namespace br.com.Chronos.FakeRepositorio
                 entidade.Id = this._lista.Count + 1;
                 this._lista.Add(entidade);
             }
-            throw new NotImplementedException();
         }
     }
 }
