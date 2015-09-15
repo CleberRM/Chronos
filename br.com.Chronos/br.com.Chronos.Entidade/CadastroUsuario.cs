@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.Entidade 
 {
-    public class CadastroUsuario
+    public class CadastroUsuario : IEntidade
     {
         // Dados Usuário
         public string UserName { get; set; }
@@ -33,5 +33,17 @@ namespace br.com.Chronos.Entidade
         public string TextoAssinaturaSmtp { get; set; }
         public bool AutenticacaoTsl { get; set; }
 
+        public int Id
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }
