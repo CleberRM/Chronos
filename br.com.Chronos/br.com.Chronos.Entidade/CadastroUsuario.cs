@@ -18,11 +18,11 @@ namespace br.com.Chronos.Entidade
         public int RamalUsuario { get; set; }
         public string AssinaturaTexto { get; set; }
         //Configuração do Usuário
-        public Boolean FlagAdministrador { get; set; }
-        public Boolean FlagTrocarSenha { get; set; }
-        public Boolean FlagSincronizarOutlook { get; set; }
-        public Boolean SincronizarOs { get; set; }
-        public Boolean UsuariInativo { get; set; }
+        public bool FlagAdministrador { get; set; }
+        public bool FlagTrocarSenha { get; set; }
+        public bool FlagSincronizarOutlook { get; set; }
+        public bool SincronizarOs { get; set; }
+        public bool UsuariInativo { get; set; }
         //Configuração SMTP
         public string NomeEmail { get; set; }
         // Utilizar e-mail do usuario para configuração do SMTP
@@ -31,7 +31,7 @@ namespace br.com.Chronos.Entidade
         public string UsuarioSmtp { get; set; }
         public string SenhaSmtp { get; set; }
         public string TextoAssinaturaSmtp { get; set; }
-        public Boolean AutenticacaoTsl { get; set; }
+        public bool AutenticacaoTsl { get; set; }
 
     }
 }
