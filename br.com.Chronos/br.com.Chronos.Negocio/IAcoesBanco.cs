@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using br.com.Chronos.Entidade;
 
 namespace br.com.Chronos.Negocio
 {
-    public interface IAcoesBanco<T>
+    public interface IAcoesBanco<T> where T : IEntidade
     {
         /// <summary>
         /// Retorna a entidade correspondente ao id passado
@@ -27,7 +28,7 @@ namespace br.com.Chronos.Negocio
         /// </summary>
         /// <param name="entidade">Entidade que deve ser preenchida com os dados utilizados para filtrar a consulta. Passar parametro nulo para pesquisa sem filtro.</param>
         /// <returns>Lista contendo todas as entidades que atendam ao filtro passado. No caso de parametro nulo, retorna todas as entidades da tabela.</returns>
-        List<T> RetornarLista(T entidade);
+        IList<T> RetornarLista(T entidade);
 
         /// <summary>
         /// Excluir entidade correspondente ao id passado
