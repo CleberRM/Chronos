@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.Entidade 
 {
-    public class CadastroUsuario : IEntidade
+    public class Usuario : IEntidade
 
     {
         public int Id
