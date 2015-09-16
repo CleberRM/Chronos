@@ -4,15 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace br.com.Chronos.Entidade
 {
-    public class Eventos : IEntidade
+    public class Setor : IEntidade
     {
-        public int Id { get; set; }
+        public int Id{ get; set;}
         public string Descricao { get; set; }
-        public string CorHex { get; set; }
-
-        
     }
 }
