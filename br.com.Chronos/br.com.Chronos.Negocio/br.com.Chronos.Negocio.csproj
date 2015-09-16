@@ -43,6 +43,7 @@
     <Compile Include="ANegocio.cs" />
     <Compile Include="IAcoesBanco.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioLogar.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\br.com.Chronos.Entidade\br.com.Chronos.Entidade.csproj">
