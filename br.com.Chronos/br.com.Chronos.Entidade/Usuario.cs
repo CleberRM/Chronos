@@ -5,23 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace br.com.Chronos.Entidade 
+namespace br.com.Chronos.Entidade
 {
     public class Usuario : IEntidade
 
     {
-        public int Id
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public int Id { get; set; }
         // Dados Usuário
         public string UserName { get; set; }
         public string SenhaUsuario { get; set; }
@@ -30,12 +19,14 @@ namespace br.com.Chronos.Entidade
         public string EmailUsuario { get; set; }
         public int RamalUsuario { get; set; }
         public string AssinaturaTexto { get; set; }
+        public Escritorio NomeEscritorio { get; set; }
+        public Setor Setor { get; set; }
         //Configuração do Usuário
-        public bool FlagAdministrador { get; set; }
-        public bool FlagTrocarSenha { get; set; }
-        public bool FlagSincronizarOutlook { get; set; }
-        public bool FlagSincronizarOs { get; set; }
-        public bool FlagUsuarioInativo { get; set; }
+        public bool Administrador { get; set; }
+        public bool TrocarSenha { get; set; }
+        public bool SincronizarOutlook { get; set; }
+        public bool SincronizarOs { get; set; }
+        public bool UsuarioInativo { get; set; }
         //Configuração SMTP
         public string NomeEmail { get; set; }
         // Utilizar e-mail do usuario para configuração do SMTP
@@ -46,6 +37,6 @@ namespace br.com.Chronos.Entidade
         public string TextoAssinaturaSmtp { get; set; }
         public bool AutenticacaoTsl { get; set; }
 
-        
+
     }
 }
