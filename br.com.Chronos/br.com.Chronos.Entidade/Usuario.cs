@@ -11,11 +11,10 @@ namespace br.com.Chronos.Entidade
 
     {
         //construtor
-        public Usuario(int id, string nomeUsuario, string senhaUsuario, Escritorio escritorio, Setor setor)
+        public Usuario(string nomeUsuario, string senhaUsuario, Escritorio escritorio, Setor setor)
         {
             this.NomeEscritorio = escritorio;
             this.Setor = setor;
-            this.Id = id;
             this.NomeUsuario = nomeUsuario;
             this.SenhaUsuario = senhaUsuario;
         }
