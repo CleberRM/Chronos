@@ -12,7 +12,7 @@ namespace br.com.Chronos.Entidade
         public int Cnpj { get; set; }
         public int InscricaoEstadual { get; set; }
         public int InscricaoMunicipal { get; set; }
-        public string NomeEscrtiorio { get; set; }
+        public string NomeEscritorio { get; set; }
         public string NomeFantasia { get; set; }
         public string Sigla { get; set; }
         public string Endereco { get; set; }
