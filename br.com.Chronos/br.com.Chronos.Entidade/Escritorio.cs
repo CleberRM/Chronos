@@ -9,7 +9,6 @@ namespace br.com.Chronos.Entidade
     public class Escritorio : IEntidade
     {
         public int Id { get; set; }
-
         public int Cnpj { get; set; }
         public int InscricaoEstadual { get; set; }
         public int InscricaoMunicipal { get; set; }
