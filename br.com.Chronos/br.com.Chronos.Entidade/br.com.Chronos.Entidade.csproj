@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Cliente.cs" />
     <Compile Include="Contato.cs" />
+    <Compile Include="Escritorio.cs" />
     <Compile Include="Eventos.cs" />
     <Compile Include="IEntidade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

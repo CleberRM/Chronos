@@ -11,27 +11,27 @@ namespace br.com.Chronos.Entidade
     {
         public int Id { get; set; }
         
-        public string nomeContato { get; set; }
+        public string NomeContato { get; set; }
 
-        public string telefoneContato { get; set; }
+        public string TelefoneContato { get; set; }
 
-        public string celularContato { get; set; }
+        public string CelularContato { get; set; }
 
-        public string setorContato { get; set; }
+        public string SetorContato { get; set; }
 
-        public string ramalContato { get; set; }
+        public string RamalContato { get; set; }
 
-        public string skypeContato { get; set; }
+        public string SkypeContato { get; set; }
 
-        public string emailContato { get; set; }
+        public string EmailContato { get; set; }
 
-        public DateTime dataniverContato { get; set; }
+        public DateTime DataAniversarioContato { get; set; }
 
-        public DateTime dataRegistroContato { get; set; }
+        public DateTime DataRegistroContato { get; set; }
 
-        public string respRegistroContato { get; set; }
+        public string ResponsavelRegistroContato { get; set; }
 
-        public bool treinamentoContato { get; set; }
+        public bool TreinamentoContato { get; set; }
 
     }
 }
