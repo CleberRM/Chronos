@@ -10,8 +10,19 @@ namespace br.com.Chronos.Entidade
     public class Usuario : IEntidade
 
     {
-        public int Id { get; set; }
+        //construtor
+        public Usuario(int id, string nomeUsuario, string senhaUsuario, Escritorio escritorio, Setor setor)
+        {
+            this.NomeEscritorio = escritorio;
+            this.Setor = setor;
+            this.Id = id;
+            this.NomeUsuario = nomeUsuario;
+            this.SenhaUsuario = senhaUsuario;
+        }
+
+
         // Dados Usuário
+        public int Id { get; set; }
         public string UserName { get; set; }
         public string SenhaUsuario { get; set; }
         public string ConfirmacaoSenha { get; set; }
@@ -36,7 +47,6 @@ namespace br.com.Chronos.Entidade
         public string SenhaSmtp { get; set; }
         public string TextoAssinaturaSmtp { get; set; }
         public bool AutenticacaoTsl { get; set; }
-
-
+        
     }
 }
