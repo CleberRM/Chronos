@@ -43,7 +43,7 @@ namespace br.com.Chronos.Entidade
         public string UsuarioSmtp { get; set; }
         public string SenhaSmtp { get; set; }
         public string TextoAssinaturaSmtp { get; set; }
-        public bool AutenticacaoTsl { get; set; }
+        public bool AutenticacaoTSL { get; set; }
 
 
     }
