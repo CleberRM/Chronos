@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ANegocio.cs" />
+    <Compile Include="BLCliente.cs" />
     <Compile Include="BLUsuario.cs" />
     <Compile Include="IAcoesBanco.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
