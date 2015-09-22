@@ -9,7 +9,7 @@ using System.Reflection;
 
 namespace br.com.Chronos.FakeRepositorio
 {
-    public class RepositorioFake<T> : IAcoesBanco<T> where T : IEntidade
+    public class RepositorioFake<T> : IAcoesBanco<T> where T : AEntidade
     {
         private IList<T> _lista;
         public RepositorioFake()

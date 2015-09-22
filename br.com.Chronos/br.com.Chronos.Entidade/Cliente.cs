@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.Entidade
 {
-    public class Cliente: IEntidade
+    public class Cliente: AEntidade
     {
-        public int Id { get; set; }
         public string NomeReduzido { get; set; }
         public string NomeCompleto { get; set; }
         public string CNPJeCPF { get; set; }
@@ -37,6 +36,5 @@ namespace br.com.Chronos.Entidade
         public bool ProdutoFolloweb { get; set; }
         public bool Ativo { get; set; }
         public bool ClienteProspecto { get; set; }
-
     }
 }

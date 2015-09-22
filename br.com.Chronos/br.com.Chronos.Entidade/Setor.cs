@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.Entidade
 {
-    public class Setor : IEntidade
+    public class Setor : AEntidade
     {
-        public int Id{ get; set;}
         public string Descricao { get; set; }
     }
 }

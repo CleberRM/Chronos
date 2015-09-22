@@ -7,7 +7,7 @@ using br.com.Chronos.Entidade;
 
 namespace br.com.Chronos.Negocio
 {
-    public abstract class ANegocio<T> where T : IEntidade
+    public abstract class ANegocio<T> where T : AEntidade
     {
         private IAcoesBanco<T> _acoesBanco;
         public ANegocio(IAcoesBanco<T> acoesBanco)

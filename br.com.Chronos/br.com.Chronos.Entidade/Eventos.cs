@@ -7,12 +7,9 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.Entidade
 {
-    public class Eventos : IEntidade
+    public class Eventos : AEntidade
     {
-        public int Id { get; set; }
         public string Descricao { get; set; }
-        public string CorHex { get; set; }
-
-        
+        public string CorHexadecimal { get; set; }
     }
 }

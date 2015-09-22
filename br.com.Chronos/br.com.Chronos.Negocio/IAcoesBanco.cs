@@ -7,7 +7,7 @@ using br.com.Chronos.Entidade;
 
 namespace br.com.Chronos.Negocio
 {
-    public interface IAcoesBanco<T> where T : IEntidade
+    public interface IAcoesBanco<T> where T : AEntidade
     {
         /// <summary>
         /// Retorna a entidade correspondente ao id passado
