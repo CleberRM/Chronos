@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdicionarEvento.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Contato.cs" />
     <Compile Include="Escritorio.cs" />
