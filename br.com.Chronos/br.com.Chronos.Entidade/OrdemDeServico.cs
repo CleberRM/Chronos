@@ -7,8 +7,16 @@ using System.Threading.Tasks;
 namespace br.com.Chronos.Entidade
 {
     public class OrdemDeServico : AEntidade
-
     {
+        public OrdemDeServico()
+        {
+            EventosDaOS = new List<LancamentoEvento>();
+            ModalidadeDaOS = new List<Modalidade>();
+            DocumentosAnexosDaOS = new List<DocumentosAnexos>();
+            MotivoAberturaOS = new List<MotivoOS>();
+            FollowCliente = new List<FollowUpOSCliente>();
+        }
+
         public string NumeroOS { get; set; }
         public Cliente clienteOS { get; set; }
         private List<LancamentoEvento> EventosDaOS { get; set; }
