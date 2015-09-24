@@ -15,6 +15,7 @@ namespace br.com.Chronos.Entidade
             DocumentosAnexosDaOS = new List<DocumentosAnexos>();
             MotivoAberturaOS = new List<MotivoOS>();
             FollowCliente = new List<FollowUpOSCliente>();
+
         }
 
         public string NumeroOS { get; set; }
