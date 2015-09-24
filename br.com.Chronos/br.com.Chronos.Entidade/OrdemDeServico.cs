@@ -22,6 +22,9 @@ namespace br.com.Chronos.Entidade
         private List<DocumentosAnexos> DocumentosAnexosDaOS { get; set; }
         private List<MotivoOS> MotivoAberturaOS { get; set; }
         private List<FollowUpOSCliente> FollowCliente { get; set; }
+        public string DescricaoOS { get; set; }
+        public string ObservacaoOS { get; set; }
+        public int TipoDeContato { get; set; }
     }
 
 }   
