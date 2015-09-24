@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DocumentosAnexos.cs" />
+    <Compile Include="FollowUpOSCliente.cs" />
     <Compile Include="LancamentoEvento.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Contato.cs" />
