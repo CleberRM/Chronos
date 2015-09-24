@@ -9,7 +9,9 @@ namespace br.com.Chronos.Entidade
     public class OrdemDeServico : AEntidade
 
     {
+        public string NumeroOS { get; set; }
+        public Cliente clienteOS { get; set; }
 
     }
 
-}
+}   
