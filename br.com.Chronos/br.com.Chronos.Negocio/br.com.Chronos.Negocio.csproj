@@ -44,7 +44,10 @@
     <Compile Include="BLCliente.cs" />
     <Compile Include="BLSetor.cs" />
     <Compile Include="BLUsuario.cs" />
+    <Compile Include="EnviadorEMail.cs" />
     <Compile Include="IAcoesBanco.cs" />
+    <Compile Include="AMensagem.cs" />
+    <Compile Include="IEnviador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioLogar.cs" />
   </ItemGroup>

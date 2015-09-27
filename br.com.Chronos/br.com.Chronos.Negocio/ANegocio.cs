@@ -9,7 +9,7 @@ namespace br.com.Chronos.Negocio
 {
     public abstract class ANegocio<T> where T : AEntidade
     {
-        private IAcoesBanco<T> _acoesBanco;
+        protected IAcoesBanco<T> _acoesBanco;
         public ANegocio(IAcoesBanco<T> acoesBanco)
         {
             this._acoesBanco = acoesBanco;
