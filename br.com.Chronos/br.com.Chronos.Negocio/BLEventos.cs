@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.Negocio
 {
-    public class BLEventos : ANegocio<Usuario>
+    public class BLEventos : ANegocio<Eventos>
     {
-        public BLEventos(IAcoesBanco<Usuario>acoesbanco) : base(acoesbanco)
+        public BLEventos(IAcoesBanco<Eventos>acoesbanco) : base(acoesbanco)
         {
 
         }

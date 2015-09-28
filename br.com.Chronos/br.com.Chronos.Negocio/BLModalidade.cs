@@ -1,15 +1,10 @@
 ﻿using br.com.Chronos.Entidade;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace br.com.Chronos.Negocio
 {
-    public class BLModalidade : ANegocio<Usuario>
+    public class BLModalidade : ANegocio<Modalidade>
     {
-        public BLModalidade(IAcoesBanco<Usuario>acoesbanco) : base(acoesbanco)
+        public BLModalidade(IAcoesBanco<Modalidade>acoesbanco) : base(acoesbanco)
         {
 
         }

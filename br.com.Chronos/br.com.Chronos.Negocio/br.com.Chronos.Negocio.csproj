@@ -42,7 +42,9 @@
   <ItemGroup>
     <Compile Include="ANegocio.cs" />
     <Compile Include="BLCliente.cs" />
+    <Compile Include="BLContato.cs" />
     <Compile Include="BLDocumentosAnexos.cs" />
+    <Compile Include="BLEscritorio.cs" />
     <Compile Include="BLEventos.cs" />
     <Compile Include="BLFollowUpOSCliente.cs" />
     <Compile Include="BLModalidade.cs" />

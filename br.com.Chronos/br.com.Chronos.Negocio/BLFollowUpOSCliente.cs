@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.Negocio
 {
-    public class BLFollowUpOSCliente : ANegocio<Usuario>
+    public class BLFollowUpOSCliente : ANegocio<FollowUpOSCliente>
     {
-        public BLFollowUpOSCliente(IAcoesBanco<Usuario>acoesbanco): base(acoesbanco)
+        public BLFollowUpOSCliente(IAcoesBanco<FollowUpOSCliente> acoesbanco): base(acoesbanco)
         {
 
         }

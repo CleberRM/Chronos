@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.Negocio
 {
-    public class BLDocumentosAnexos : ANegocio<Usuario>
+    public class BLDocumentosAnexos : ANegocio<DocumentosAnexos>
     {
-        public BLDocumentosAnexos(IAcoesBanco<Usuario>acoesbanco): base (acoesbanco)
+        public BLDocumentosAnexos(IAcoesBanco<DocumentosAnexos> acoesbanco): base (acoesbanco)
         {
 
         }

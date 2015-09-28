@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.Negocio
 {
-    public class BLOrdemDeServico : ANegocio<Usuario>
+    public class BLOrdemDeServico : ANegocio<OrdemDeServico>
     {
-        public BLOrdemDeServico(IAcoesBanco<Usuario>acoesbanco): base(acoesbanco)
+        public BLOrdemDeServico(IAcoesBanco<OrdemDeServico> acoesbanco): base(acoesbanco)
         {
 
         }

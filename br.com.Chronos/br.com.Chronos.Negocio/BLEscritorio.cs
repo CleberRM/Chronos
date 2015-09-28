@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.Negocio
 {
-    public class BLSetor : ANegocio<Setor>
+    public class BLEscritorio : ANegocio<Escritorio>
     {
-        public BLSetor(IAcoesBanco<Setor> acoesbanco): base(acoesbanco)
+        public BLEscritorio(IAcoesBanco<Escritorio>acoesbanco) : base(acoesbanco)
         {
-            
+
         }
     }
 }
