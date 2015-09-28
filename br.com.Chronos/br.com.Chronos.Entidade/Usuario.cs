@@ -13,7 +13,7 @@ namespace br.com.Chronos.Entidade
         //construtor
         public Usuario(string nomeUsuario, string senhaUsuario, Escritorio escritorio, Setor setor)
         {
-            this.NomeEscritorio = escritorio;
+            this.EscritorioUsusario = escritorio;
             this.Setor = setor;
             this.NomeUsuario = nomeUsuario;
             this.SenhaUsuario = senhaUsuario;
@@ -26,7 +26,7 @@ namespace br.com.Chronos.Entidade
         public string EmailUsuario { get; set; }
         public int RamalUsuario { get; set; }
         public string AssinaturaTexto { get; set; }
-        public Escritorio NomeEscritorio { get; private set; }
+        public Escritorio EscritorioUsusario { get; private set; }
         public Setor Setor { get; private set; }
         //Configuração do Usuário
         public bool Administrador { get; set; }

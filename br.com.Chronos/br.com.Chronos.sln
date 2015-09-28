@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.com.Chronos.FakeReposito
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.com.Chronos.TestesUnitarios", "br.com.Chronos.TestesUnitarios\br.com.Chronos.TestesUnitarios.csproj", "{5A79CDD5-74E7-41CA-BBA1-966B023BFC83}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.com.Chronos.AcessoDados", "br.com.Chronos.AcessoDados\br.com.Chronos.AcessoDados.csproj", "{3433B7D0-B648-485A-9F63-C78E150EEC42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{5A79CDD5-74E7-41CA-BBA1-966B023BFC83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A79CDD5-74E7-41CA-BBA1-966B023BFC83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A79CDD5-74E7-41CA-BBA1-966B023BFC83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3433B7D0-B648-485A-9F63-C78E150EEC42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3433B7D0-B648-485A-9F63-C78E150EEC42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3433B7D0-B648-485A-9F63-C78E150EEC42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3433B7D0-B648-485A-9F63-C78E150EEC42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
