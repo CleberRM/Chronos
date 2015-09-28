@@ -8,6 +8,7 @@ namespace br.com.Chronos.Entidade
 {
     public class MensagemDados : AEntidade
     {
+        public string Remetente { get; set; }
         public string Destinatario { get; set; }
         public string ComCopia { get; set; }
         public string ComCopiaOculta { get; set; }
