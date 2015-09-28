@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestarUsuario.cs" />
+    <Compile Include="TesteSetor.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\br.com.Chronos.Entidade\br.com.Chronos.Entidade.csproj">
