@@ -15,12 +15,16 @@ namespace br.com.Chronos.Entidade
             DocumentosAnexosDaOS = new List<DocumentosAnexos>();
             MotivoAberturaOS = new List<MotivoOS>();
             FollowCliente = new List<FollowUpOSCliente>();
+            EmailsEnviadosOS = new List<MensagemDados>();
+            EmailsRecebidosOS = new List<MensagemDados>();
         }
 
         public string NumeroOS { get; set; }
         public Cliente clienteOS { get; set; }
         private List<LancamentoEvento> EventosDaOS { get; set; }
         private List<Modalidade> ModalidadeDaOS { get; set; }
+        private List<MensagemDados> EmailsEnviadosOS { get; set; }
+        private List<MensagemDados> EmailsRecebidosOS { get; set; }
         public int NivelDaOS { get; set; } 
         public string NomeDocumento { get; set; }
         public string ReferenciaExemplo { get; set; }
