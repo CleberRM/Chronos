@@ -13,6 +13,7 @@ namespace br.com.Chronos.AcessoDados
         public DbSet<Setor> Setores { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Escritorio> Escritorios { get; set; }
+        
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

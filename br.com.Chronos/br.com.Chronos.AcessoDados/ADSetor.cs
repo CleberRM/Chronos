@@ -12,7 +12,19 @@ namespace br.com.Chronos.AcessoDados
     {
         public bool ExcluirEntidadePor(int id)
         {
-            throw new NotImplementedException();
+            using (OSContext contexto = new OSContext())
+            {
+
+                var result = RetornarEntidadePor(id);
+                if (result != null)
+                {
+                    contexto.Setores.Remove(result);
+                    contexto.SaveChanges();
+                    return true;
+
+                }
+                return false;
+            }
         }
 
         public Setor RetornarEntidadePor(int id)
@@ -27,7 +39,11 @@ namespace br.com.Chronos.AcessoDados
 
         public IList<Setor> RetornarLista(Setor entidade)
         {
-            throw new NotImplementedException();
+            using (OSContext contexto = new OSContext())
+            {
+                return contexto.Setores.Where(x => x.Descricao.Contains(entidade.Descricao)).ToList();
+            }    
+
         }
 
         public int Salvar(Setor entidade)

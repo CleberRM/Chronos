@@ -50,6 +50,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ADSetor.cs" />
+    <Compile Include="ADUsuario.cs" />
+    <Compile Include="Migrations\201509291653309_CriarBanco.cs" />
+    <Compile Include="Migrations\201509291653309_CriarBanco.Designer.cs">
+      <DependentUpon>201509291653309_CriarBanco.cs</DependentUpon>
+    </Compile>
     <Compile Include="OSContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,6 +72,11 @@
       <Project>{9fe52dae-8afb-4545-b1f8-62410cba4604}</Project>
       <Name>br.com.Chronos.Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201509291653309_CriarBanco.resx">
+      <DependentUpon>201509291653309_CriarBanco.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
