@@ -48,7 +48,28 @@ namespace br.com.Chronos.AcessoDados
 
         public int Salvar(Setor entidade)
         {
-            throw new NotImplementedException();
+            using (OSContext contexto = new OSContext())
+            {
+                var result = RetornarEntidadePor(entidade.Id);
+
+                if (result != null)
+                {
+
+                    contexto.Entry(result).CurrentValues.SetValues(entidade);
+                    
+
+                }
+                else
+                {
+                    contexto.Setores.Add(entidade);
+                    
+                }
+
+                contexto.SaveChanges();
+                return entidade.Id;
+            }
+
+            
         }
     }
 }
