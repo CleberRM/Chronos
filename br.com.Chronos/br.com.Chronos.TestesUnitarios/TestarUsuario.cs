@@ -18,21 +18,19 @@ namespace br.com.Chronos.TestesUnitarios
         public void TestarClasseUsuario()
         {
 
-            Setor setor = new Setor();
-            setor.Descricao = "Projetos";
-
-            Escritorio office = new Escritorio();
-            office.NomeEscritorio = "Sao";
-
-            Usuario user = new Usuario("Gian", "1",office, setor);
-
             IAcoesBanco<Usuario> acoesBanco = new RepositorioFake<Usuario>();
 
             BLUsuario blUsuario = new BLUsuario(acoesBanco);
 
+
+            Usuario user = new Usuario("Gian", "1");
+
             blUsuario.Salvar(user);
 
-            Assert.AreEqual("Gian", user.NomeUsuario);
+            Usuario nome = blUsuario.RetornarEntidadePor(1);
+
+
+            Assert.AreEqual("Gian", nome.NomeUsuario);
             
                 
 

@@ -11,10 +11,8 @@ namespace br.com.Chronos.Entidade
 
     {
         //construtor
-        public Usuario(string nomeUsuario, string senhaUsuario, Escritorio escritorio, Setor setor)
+        public Usuario(string nomeUsuario, string senhaUsuario)
         {
-            this.EscritorioUsusario = escritorio;
-            this.Setor = setor;
             this.NomeUsuario = nomeUsuario;
             this.SenhaUsuario = senhaUsuario;
         }
