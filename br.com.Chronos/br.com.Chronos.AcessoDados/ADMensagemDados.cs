@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.AcessoDados
 {
-    class ADMensagemDados : IAcoesBanco<MensagemDados>
+    public class ADMensagemDados : IAcoesBanco<MensagemDados>
     {
         private OSContext _contexto;
 

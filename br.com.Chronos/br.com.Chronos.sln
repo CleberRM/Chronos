@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.com.Chronos.TestesUnitar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.com.Chronos.AcessoDados", "br.com.Chronos.AcessoDados\br.com.Chronos.AcessoDados.csproj", "{3433B7D0-B648-485A-9F63-C78E150EEC42}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.com.Chronos.WebUI", "br.com.Chronos.WebUI\br.com.Chronos.WebUI.csproj", "{05D5E7CE-20EB-41E7-A59B-DC815D60D650}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.com.Chronos.DependencyInjection", "br.com.Chronos.DependencyInjection\br.com.Chronos.DependencyInjection.csproj", "{86F2D8B8-FA18-4973-BA99-8AE84138EBCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{3433B7D0-B648-485A-9F63-C78E150EEC42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3433B7D0-B648-485A-9F63-C78E150EEC42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3433B7D0-B648-485A-9F63-C78E150EEC42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05D5E7CE-20EB-41E7-A59B-DC815D60D650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05D5E7CE-20EB-41E7-A59B-DC815D60D650}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05D5E7CE-20EB-41E7-A59B-DC815D60D650}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05D5E7CE-20EB-41E7-A59B-DC815D60D650}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86F2D8B8-FA18-4973-BA99-8AE84138EBCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86F2D8B8-FA18-4973-BA99-8AE84138EBCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86F2D8B8-FA18-4973-BA99-8AE84138EBCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86F2D8B8-FA18-4973-BA99-8AE84138EBCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

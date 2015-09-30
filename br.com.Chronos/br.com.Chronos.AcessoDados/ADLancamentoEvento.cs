@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.AcessoDados
 {
-    class ADLancamentoEvento : IAcoesBanco<LancamentoEvento>
+    public class ADLancamentoEvento : IAcoesBanco<LancamentoEvento>
     {
 
         private OSContext _contexto;

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.AcessoDados
 {
-    class ADOrdemDeServico : IAcoesBanco<OrdemDeServico>
+    public class ADOrdemDeServico : IAcoesBanco<OrdemDeServico>
     {
 
         private OSContext _contexto;
