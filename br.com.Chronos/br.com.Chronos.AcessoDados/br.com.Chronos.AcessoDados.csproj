@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADEscritorio.cs" />
     <Compile Include="ADSetor.cs" />
     <Compile Include="ADUsuario.cs" />
     <Compile Include="Migrations\201509291653309_CriarBanco.cs" />
