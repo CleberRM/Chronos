@@ -10,60 +10,57 @@ namespace br.com.Chronos.AcessoDados
 {
     public class ADUsuario : IAcoesBanco<Usuario>
     {
+        private OSContext _contexto;
+
+        public ADUsuario(OSContext contexto)
+        {
+            _contexto = contexto;
+
+        }
+
         public bool ExcluirEntidadePor(int id)
         {
-            using (OSContext contexto = new OSContext())
+            var result = RetornarEntidadePor(id);
+            if (result != null)
             {
+                _contexto.Usuarios.Remove(result);
+                _contexto.SaveChanges();
+                return true;
 
-                var result = RetornarEntidadePor(id);
-                if (result != null)
-                {
-                    contexto.Usuarios.Remove(result);
-                    contexto.SaveChanges();
-                    return true;
-
-                }
-                return false;
             }
+            return false;
+
         }
 
         public Usuario RetornarEntidadePor(int id)
         {
-            using (OSContext contexto = new OSContext())
-            {
-                return (from c in contexto.Usuarios
-                       where c.Id == id
-                       select c).FirstOrDefault();
-            }
+            return (from c in _contexto.Usuarios
+                    where c.Id == id
+                    select c).FirstOrDefault();
 
         }
 
         public IList<Usuario> RetornarLista(Usuario entidade)
         {
-            using (OSContext contexto = new OSContext())
-            {
-                return contexto.Usuarios.Where(x => x.NomeUsuario.Contains(entidade.NomeUsuario)).ToList();
-            }
+            return _contexto.Usuarios.Where(x => x.NomeUsuario.Contains(entidade.NomeUsuario)).ToList();
         }
 
         public int Salvar(Usuario entidade)
         {
-            using (OSContext contexto = new OSContext())
+            var result = RetornarEntidadePor(entidade.Id);
+
+            if (result != null)
             {
-                var result = RetornarEntidadePor(entidade.Id);
-
-                if (result != null)
-                {
-                    contexto.Entry(result).CurrentValues.SetValues(entidade);
-                }
-                else
-                {
-                    contexto.Usuarios.Add(entidade);
-                }
-
-                contexto.SaveChanges();
-                return entidade.Id;
+                _contexto.Entry(result).CurrentValues.SetValues(entidade);
             }
+            else
+            {
+                _contexto.Usuarios.Add(entidade);
+            }
+
+            _contexto.SaveChanges();
+            return entidade.Id;
+
         }
     }
 }

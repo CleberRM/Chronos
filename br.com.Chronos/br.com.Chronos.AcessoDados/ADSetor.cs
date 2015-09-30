@@ -10,66 +10,64 @@ namespace br.com.Chronos.AcessoDados
 {
     public class ADSetor : IAcoesBanco<Setor>
     {
+        private OSContext _contexto;
+
+        public ADSetor(OSContext contexto)
+        {
+            _contexto = contexto;
+        }
+
+
         public bool ExcluirEntidadePor(int id)
         {
-            using (OSContext contexto = new OSContext())
+            var result = RetornarEntidadePor(id);
+            if (result != null)
             {
+                _contexto.Setores.Remove(result);
+                _contexto.SaveChanges();
+                return true;
 
-                var result = RetornarEntidadePor(id);
-                if (result != null)
-                {
-                    contexto.Setores.Remove(result);
-                    contexto.SaveChanges();
-                    return true;
-
-                }
-                return false;
             }
+            return false;
+
         }
 
         public Setor RetornarEntidadePor(int id)
         {
-            using(OSContext contexto = new OSContext())
-            {
-                return (from c in contexto.Setores
-                        where c.Id == id
-                        select c).FirstOrDefault();
-            }
+            return (from c in _contexto.Setores
+                    where c.Id == id
+                    select c).FirstOrDefault();
+
         }
 
         public IList<Setor> RetornarLista(Setor entidade)
         {
-            using (OSContext contexto = new OSContext())
-            {
-                return contexto.Setores.Where(x => x.Descricao.Contains(entidade.Descricao)).ToList();
-            }    
+            return _contexto.Setores.Where(x => x.Descricao.Contains(entidade.Descricao)).ToList();
 
         }
 
         public int Salvar(Setor entidade)
         {
-            using (OSContext contexto = new OSContext())
+
+            var result = RetornarEntidadePor(entidade.Id);
+
+            if (result != null)
             {
-                var result = RetornarEntidadePor(entidade.Id);
 
-                if (result != null)
-                {
+                _contexto.Entry(result).CurrentValues.SetValues(entidade);
 
-                    contexto.Entry(result).CurrentValues.SetValues(entidade);
-                    
 
-                }
-                else
-                {
-                    contexto.Setores.Add(entidade);
-                    
-                }
+            }
+            else
+            {
+                _contexto.Setores.Add(entidade);
 
-                contexto.SaveChanges();
-                return entidade.Id;
             }
 
-            
+            _contexto.SaveChanges();
+            return entidade.Id;
+
+
         }
     }
 }

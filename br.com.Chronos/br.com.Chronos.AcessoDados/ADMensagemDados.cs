@@ -10,57 +10,53 @@ namespace br.com.Chronos.AcessoDados
 {
     class ADMensagemDados : IAcoesBanco<MensagemDados>
     {
+        private OSContext _contexto;
+
+        public ADMensagemDados(OSContext contexto)
+        {
+            _contexto = contexto;
+        }
+
         public bool ExcluirEntidadePor(int id)
         {
-            using (OSContext contexto = new OSContext())
+            var result = RetornarEntidadePor(id);
+            if (result != null)
             {
-                var result = RetornarEntidadePor(id);
-                if (result != null)
-                {
-                    contexto.MensagensDados.Remove(result);
-                    contexto.SaveChanges();
-                    return true;
-                }
-                return false;
+                _contexto.MensagensDados.Remove(result);
+                _contexto.SaveChanges();
+                return true;
             }
+            return false;
 
         }
 
         public MensagemDados RetornarEntidadePor(int id)
         {
-            using (OSContext contexto = new OSContext())
-            {
-                return (from c in contexto.MensagensDados
-                        where c.Id == id
-                        select c).FirstOrDefault();
-            }
+            return (from c in _contexto.MensagensDados
+                    where c.Id == id
+                    select c).FirstOrDefault();
         }
 
         public IList<MensagemDados> RetornarLista(MensagemDados entidade)
         {
-            using (OSContext contexto = new OSContext())
-            {
-                return contexto.MensagensDados.Where(x => x.Assunto.Contains(entidade.Assunto)).ToList();
-            }
+            return _contexto.MensagensDados.Where(x => x.Assunto.Contains(entidade.Assunto)).ToList();
         }
 
         public int Salvar(MensagemDados entidade)
         {
-            using (OSContext contexto = new OSContext())
-            {
                 var result = RetornarEntidadePor(entidade.Id);
                 if (result != null)
                 {
-                    contexto.Entry(result).CurrentValues.SetValues(entidade);
+                    _contexto.Entry(result).CurrentValues.SetValues(entidade);
                 }
                 else
                 {
-                    contexto.MensagensDados.Add(entidade);
+                    _contexto.MensagensDados.Add(entidade);
                 }
-                contexto.SaveChanges();
+                _contexto.SaveChanges();
                 return entidade.Id;
-                
-            }
+
+            
         }
     }
 }

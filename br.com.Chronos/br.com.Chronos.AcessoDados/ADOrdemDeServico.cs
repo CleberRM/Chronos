@@ -10,55 +10,53 @@ namespace br.com.Chronos.AcessoDados
 {
     class ADOrdemDeServico : IAcoesBanco<OrdemDeServico>
     {
+
+        private OSContext _contexto;
+
+        public ADOrdemDeServico(OSContext contexto)
+        {
+            _contexto = contexto;
+        }
+
+
         public bool ExcluirEntidadePor(int id)
         {
-            using (OSContext contexto = new OSContext())
+            var result = RetornarEntidadePor(id);
+            if (result != null)
             {
-                var result = RetornarEntidadePor(id);
-                if (result != null)
-                {
-                    contexto.OrdemDeServicos.Remove(result);
-                    contexto.SaveChanges();
-                    return true;
-                }
-                return false;
+                _contexto.OrdemDeServicos.Remove(result);
+                _contexto.SaveChanges();
+                return true;
             }
+            return false;
         }
 
         public OrdemDeServico RetornarEntidadePor(int id)
         {
-            using (OSContext contexto = new OSContext())
-            {
-                return (from c in contexto.OrdemDeServicos
-                        where c.Id == id
-                        select c).FirstOrDefault();
-            }
+            return (from c in _contexto.OrdemDeServicos
+                    where c.Id == id
+                    select c).FirstOrDefault();
+
         }
 
         public IList<OrdemDeServico> RetornarLista(OrdemDeServico entidade)
         {
-            using (OSContext contexto = new OSContext())
-            {
-                return contexto.OrdemDeServicos.Where(x => x.NumeroOS.Contains(entidade.NumeroOS)).ToList();
-            }
+            return _contexto.OrdemDeServicos.Where(x => x.NumeroOS.Contains(entidade.NumeroOS)).ToList();
         }
 
         public int Salvar(OrdemDeServico entidade)
         {
-            using (OSContext contexto = new OSContext())
+            var result = RetornarEntidadePor(entidade.Id);
+            if (result != null)
             {
-                var result = RetornarEntidadePor(entidade.Id);
-                if (result != null)
-                {
-                    contexto.Entry(result).CurrentValues.SetValues(entidade);
-                }
-                else
-                {
-                    contexto.OrdemDeServicos.Add(entidade);
-                }
-                contexto.SaveChanges();
-                return entidade.Id;
+                _contexto.Entry(result).CurrentValues.SetValues(entidade);
             }
+            else
+            {
+                _contexto.OrdemDeServicos.Add(entidade);
+            }
+            _contexto.SaveChanges();
+            return entidade.Id;
         }
     }
 }
