@@ -14,10 +14,9 @@ namespace br.com.Chronos.AcessoDados
 
         public ADSetor(OSContext contexto)
         {
-            _contexto = contexto; 
+            _contexto = contexto;
         }
-
-
+        
         public bool ExcluirEntidadePor(int id)
         {
             var result = RetornarEntidadePor(id);
@@ -26,10 +25,8 @@ namespace br.com.Chronos.AcessoDados
                 _contexto.Setores.Remove(result);
                 _contexto.SaveChanges();
                 return true;
-
             }
             return false;
-
         }
 
         public Setor RetornarEntidadePor(int id)
@@ -37,7 +34,6 @@ namespace br.com.Chronos.AcessoDados
             return (from c in _contexto.Setores
                     where c.Id == id
                     select c).FirstOrDefault();
-
         }
 
         public IList<Setor> RetornarLista(Setor entidade)
@@ -48,20 +44,15 @@ namespace br.com.Chronos.AcessoDados
 
         public int Salvar(Setor entidade)
         {
-
             var result = RetornarEntidadePor(entidade.Id);
 
             if (result != null)
             {
-
                 _contexto.Entry(result).CurrentValues.SetValues(entidade);
-
-
             }
             else
             {
                 _contexto.Setores.Add(entidade);
-
             }
 
             _contexto.SaveChanges();

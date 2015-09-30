@@ -21,7 +21,7 @@ namespace br.com.Chronos.Entidade
 
         public string NumeroOS { get; set; }
         public Cliente clienteOS { get; set; }
-        private List<LancamentoEvento> EventosDaOS { get; set; }
+        public List<LancamentoEvento> EventosDaOS { get; set; }
         private List<Modalidade> ModalidadeDaOS { get; set; }
         private List<MensagemDados> EmailsEnviadosOS { get; set; }
         private List<MensagemDados> EmailsRecebidosOS { get; set; }

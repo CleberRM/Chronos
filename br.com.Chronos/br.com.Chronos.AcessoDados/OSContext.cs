@@ -40,7 +40,9 @@ namespace br.com.Chronos.AcessoDados
 
             modelBuilder.Entity<OrdemDeServico>().ToTable("OrdemDeServicos")
                 .HasKey(x => x.Id)
-                .HasRequired(x => x.clienteOS);
+                .HasMany(x => x.EventosDaOS).WithRequired(x => x.OrdemServico);
+            
+            modelBuilder.Entity<OrdemDeServico>().HasRequired(x => x.clienteOS);
 
             modelBuilder.Entity<Cliente>().ToTable("Clientes")
                 .HasKey(x => x.Id);

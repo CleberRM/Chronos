@@ -19,7 +19,8 @@ namespace br.com.Chronos.Entidade
         public DateTime DataPrevistaConclusao { get; set; }
         public DateTime DataConclusao { get; set; }
         public string StatusEvento { get; set; }
-
+        public int IdOrdemServico { get; set; }
+        public virtual OrdemDeServico OrdemServico { get; set; }
     }
 
 }
