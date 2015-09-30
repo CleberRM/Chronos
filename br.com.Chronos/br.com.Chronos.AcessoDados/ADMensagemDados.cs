@@ -8,61 +8,58 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.AcessoDados
 {
-    public class ADUsuario : IAcoesBanco<Usuario>
+    class ADMensagemDados : IAcoesBanco<MensagemDados>
     {
         public bool ExcluirEntidadePor(int id)
         {
             using (OSContext contexto = new OSContext())
             {
-
                 var result = RetornarEntidadePor(id);
                 if (result != null)
                 {
-                    contexto.Usuarios.Remove(result);
+                    contexto.MensagensDados.Remove(result);
                     contexto.SaveChanges();
                     return true;
-
                 }
                 return false;
             }
+
         }
 
-        public Usuario RetornarEntidadePor(int id)
+        public MensagemDados RetornarEntidadePor(int id)
         {
             using (OSContext contexto = new OSContext())
             {
-                return (from c in contexto.Usuarios
-                       where c.Id == id
-                       select c).FirstOrDefault();
+                return (from c in contexto.MensagensDados
+                        where c.Id == id
+                        select c).FirstOrDefault();
             }
-
         }
 
-        public IList<Usuario> RetornarLista(Usuario entidade)
+        public IList<MensagemDados> RetornarLista(MensagemDados entidade)
         {
             using (OSContext contexto = new OSContext())
             {
-                return contexto.Usuarios.Where(x => x.NomeUsuario.Contains(entidade.NomeUsuario)).ToList();
+                return contexto.MensagensDados.Where(x => x.Assunto.Contains(entidade.Assunto)).ToList();
             }
         }
 
-        public int Salvar(Usuario entidade)
+        public int Salvar(MensagemDados entidade)
         {
             using (OSContext contexto = new OSContext())
             {
                 var result = RetornarEntidadePor(entidade.Id);
-
                 if (result != null)
                 {
                     contexto.Entry(result).CurrentValues.SetValues(entidade);
                 }
                 else
                 {
-                    contexto.Usuarios.Add(entidade);
+                    contexto.MensagensDados.Add(entidade);
                 }
-
                 contexto.SaveChanges();
                 return entidade.Id;
+                
             }
         }
     }

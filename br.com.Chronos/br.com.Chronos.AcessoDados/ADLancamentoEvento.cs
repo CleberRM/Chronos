@@ -8,62 +8,65 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.AcessoDados
 {
-    public class ADUsuario : IAcoesBanco<Usuario>
+    class ADLancamentoEvento : IAcoesBanco<LancamentoEvento>
     {
         public bool ExcluirEntidadePor(int id)
         {
+
             using (OSContext contexto = new OSContext())
             {
-
                 var result = RetornarEntidadePor(id);
                 if (result != null)
                 {
-                    contexto.Usuarios.Remove(result);
+                    contexto.LancamentoEventos.Remove(result);
                     contexto.SaveChanges();
                     return true;
-
                 }
                 return false;
             }
+
+
         }
 
-        public Usuario RetornarEntidadePor(int id)
+        public LancamentoEvento RetornarEntidadePor(int id)
         {
             using (OSContext contexto = new OSContext())
             {
-                return (from c in contexto.Usuarios
-                       where c.Id == id
-                       select c).FirstOrDefault();
+                return (from c in contexto.LancamentoEventos
+                        where c.Id == id
+                        select c).FirstOrDefault();
             }
+
 
         }
 
-        public IList<Usuario> RetornarLista(Usuario entidade)
+        public IList<LancamentoEvento> RetornarLista(LancamentoEvento entidade)
         {
             using (OSContext contexto = new OSContext())
             {
-                return contexto.Usuarios.Where(x => x.NomeUsuario.Contains(entidade.NomeUsuario)).ToList();
+                return contexto.LancamentoEventos.Where(x => x.StatusEvento.Contains(entidade.StatusEvento)).ToList();
+                
             }
+
+
         }
 
-        public int Salvar(Usuario entidade)
+        public int Salvar(LancamentoEvento entidade)
         {
             using (OSContext contexto = new OSContext())
             {
                 var result = RetornarEntidadePor(entidade.Id);
-
                 if (result != null)
                 {
                     contexto.Entry(result).CurrentValues.SetValues(entidade);
-                }
-                else
+                }else
                 {
-                    contexto.Usuarios.Add(entidade);
+                    contexto.LancamentoEventos.Add(entidade);
                 }
 
                 contexto.SaveChanges();
                 return entidade.Id;
-            }
+           }
         }
     }
 }
