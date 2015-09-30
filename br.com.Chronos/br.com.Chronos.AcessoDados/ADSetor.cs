@@ -14,7 +14,7 @@ namespace br.com.Chronos.AcessoDados
 
         public ADSetor(OSContext contexto)
         {
-            _contexto = contexto;
+            _contexto = contexto; 
         }
 
 
