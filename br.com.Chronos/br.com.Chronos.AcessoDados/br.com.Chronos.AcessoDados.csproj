@@ -53,8 +53,11 @@
     <Compile Include="ADContato.cs" />
     <Compile Include="ADDocumentosAnexos.cs" />
     <Compile Include="ADEscritorio.cs" />
+    <Compile Include="ADEventos.cs" />
+    <Compile Include="ADFollowUpOSCliente.cs" />
     <Compile Include="ADLancamentoEvento.cs" />
     <Compile Include="ADMensagemDados.cs" />
+    <Compile Include="ADModalidade.cs" />
     <Compile Include="ADOrdemDeServico.cs" />
     <Compile Include="ADSetor.cs" />
     <Compile Include="ADUsuario.cs" />
