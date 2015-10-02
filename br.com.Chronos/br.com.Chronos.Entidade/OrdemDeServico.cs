@@ -29,9 +29,9 @@ namespace br.com.Chronos.Entidade
         public string NomeDocumento { get; set; }
         public string ReferenciaExemplo { get; set; }
         public DateTime DataVencimentoOS { get; set; }
-        public Usuario ResponsavelConclusãoOS { get; set; }
+        public Usuario ResponsavelConclusaoOS { get; set; }
         public DateTime DataConclusaoOS { get; set; }
-        private List<DocumentosAnexos> DocumentosAnexosDaOS { get; set; }
+        public List<DocumentosAnexos> DocumentosAnexosDaOS { get; set; }
         private List<MotivoOS> MotivoAberturaOS { get; set; }
         private List<FollowUpOSCliente> FollowCliente { get; set; }
         public string DescricaoOS { get; set; }

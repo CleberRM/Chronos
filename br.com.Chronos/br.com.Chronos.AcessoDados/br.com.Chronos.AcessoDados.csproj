@@ -49,6 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADCliente.cs" />
+    <Compile Include="ADContato.cs" />
+    <Compile Include="ADDocumentosAnexos.cs" />
     <Compile Include="ADEscritorio.cs" />
     <Compile Include="ADLancamentoEvento.cs" />
     <Compile Include="ADMensagemDados.cs" />

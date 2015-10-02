@@ -2,7 +2,7 @@ namespace br.com.Chronos.AcessoDados.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
-
+    
     public partial class CriarBanco : DbMigration
     {
         public override void Up()
@@ -45,6 +45,34 @@ namespace br.com.Chronos.AcessoDados.Migrations
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Usuarios", t => t.ResponsavelCriacao_Id)
                 .Index(t => t.ResponsavelCriacao_Id);
+            
+            CreateTable(
+                "dbo.Contatos",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        NomeContato = c.String(),
+                        TelefoneContato = c.String(),
+                        CelularContato = c.String(),
+                        SetorContato = c.String(),
+                        RamalContato = c.String(),
+                        SkypeContato = c.String(),
+                        EmailContato = c.String(),
+                        DataAniversarioContato = c.DateTime(nullable: false),
+                        DataRegistroContato = c.DateTime(nullable: false),
+                        ResponsavelRegistroContato = c.String(),
+                        TreinamentoContato = c.Boolean(nullable: false),
+                        IdCliente = c.Int(nullable: false),
+                        DataCriacao = c.DateTime(nullable: false),
+                        IdResponsavelCriacao = c.Int(nullable: false),
+                        ResponsavelCriacao_Id = c.Int(),
+                        Clientes_Id = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Usuarios", t => t.ResponsavelCriacao_Id)
+                .ForeignKey("dbo.Clientes", t => t.Clientes_Id, cascadeDelete: true)
+                .Index(t => t.ResponsavelCriacao_Id)
+                .Index(t => t.Clientes_Id);
             
             CreateTable(
                 "dbo.Usuarios",
@@ -116,44 +144,22 @@ namespace br.com.Chronos.AcessoDados.Migrations
                 .Index(t => t.Id);
             
             CreateTable(
-                "dbo.LancamentoEventos",
+                "dbo.DocumentosAnexosDaOS",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        DataPrevistaConclusao = c.DateTime(nullable: false),
-                        DataConclusao = c.DateTime(nullable: false),
-                        StatusEvento = c.String(),
-                        IdOrdemServico = c.Int(nullable: false),
+                        NomeDocumento = c.String(),
+                        CaminhoDocumento = c.String(),
+                        IdOS = c.Int(nullable: false),
                         DataCriacao = c.DateTime(nullable: false),
                         IdResponsavelCriacao = c.Int(nullable: false),
-                        EventoLancado_Id = c.Int(),
                         OrdemServico_Id = c.Int(nullable: false),
                         ResponsavelCriacao_Id = c.Int(),
-                        ResponsavelEvento_Id = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Eventos", t => t.EventoLancado_Id)
                 .ForeignKey("dbo.OrdemDeServicos", t => t.OrdemServico_Id, cascadeDelete: true)
                 .ForeignKey("dbo.Usuarios", t => t.ResponsavelCriacao_Id)
-                .ForeignKey("dbo.Usuarios", t => t.ResponsavelEvento_Id, cascadeDelete: true)
-                .Index(t => t.EventoLancado_Id)
                 .Index(t => t.OrdemServico_Id)
-                .Index(t => t.ResponsavelCriacao_Id)
-                .Index(t => t.ResponsavelEvento_Id);
-            
-            CreateTable(
-                "dbo.Eventos",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Descricao = c.String(),
-                        CorHexadecimal = c.String(),
-                        DataCriacao = c.DateTime(nullable: false),
-                        IdResponsavelCriacao = c.Int(nullable: false),
-                        ResponsavelCriacao_Id = c.Int(),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Usuarios", t => t.ResponsavelCriacao_Id)
                 .Index(t => t.ResponsavelCriacao_Id);
             
             CreateTable(
@@ -173,15 +179,56 @@ namespace br.com.Chronos.AcessoDados.Migrations
                         DataCriacao = c.DateTime(nullable: false),
                         IdResponsavelCriacao = c.Int(nullable: false),
                         clienteOS_Id = c.Int(nullable: false),
-                        ResponsavelConclusãoOS_Id = c.Int(),
+                        ResponsavelConclusaoOS_Id = c.Int(),
                         ResponsavelCriacao_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Clientes", t => t.clienteOS_Id, cascadeDelete: true)
-                .ForeignKey("dbo.Usuarios", t => t.ResponsavelConclusãoOS_Id)
+                .ForeignKey("dbo.Usuarios", t => t.ResponsavelConclusaoOS_Id)
                 .ForeignKey("dbo.Usuarios", t => t.ResponsavelCriacao_Id)
                 .Index(t => t.clienteOS_Id)
-                .Index(t => t.ResponsavelConclusãoOS_Id)
+                .Index(t => t.ResponsavelConclusaoOS_Id)
+                .Index(t => t.ResponsavelCriacao_Id);
+            
+            CreateTable(
+                "dbo.LancamentoEventos",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        DataPrevistaConclusao = c.DateTime(nullable: false),
+                        DataConclusao = c.DateTime(nullable: false),
+                        StatusEvento = c.String(),
+                        IdOrdemServico = c.Int(nullable: false),
+                        DataCriacao = c.DateTime(nullable: false),
+                        IdResponsavelCriacao = c.Int(nullable: false),
+                        EventoLancado_Id = c.Int(),
+                        ResponsavelCriacao_Id = c.Int(),
+                        ResponsavelEvento_Id = c.Int(nullable: false),
+                        OrdemServico_Id = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Eventos", t => t.EventoLancado_Id)
+                .ForeignKey("dbo.Usuarios", t => t.ResponsavelCriacao_Id)
+                .ForeignKey("dbo.Usuarios", t => t.ResponsavelEvento_Id, cascadeDelete: true)
+                .ForeignKey("dbo.OrdemDeServicos", t => t.OrdemServico_Id, cascadeDelete: true)
+                .Index(t => t.EventoLancado_Id)
+                .Index(t => t.ResponsavelCriacao_Id)
+                .Index(t => t.ResponsavelEvento_Id)
+                .Index(t => t.OrdemServico_Id);
+            
+            CreateTable(
+                "dbo.Eventos",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Descricao = c.String(),
+                        CorHexadecimal = c.String(),
+                        DataCriacao = c.DateTime(nullable: false),
+                        IdResponsavelCriacao = c.Int(nullable: false),
+                        ResponsavelCriacao_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Usuarios", t => t.ResponsavelCriacao_Id)
                 .Index(t => t.ResponsavelCriacao_Id);
             
             CreateTable(
@@ -208,38 +255,48 @@ namespace br.com.Chronos.AcessoDados.Migrations
         public override void Down()
         {
             DropForeignKey("dbo.MensagensDados", "ResponsavelCriacao_Id", "dbo.Usuarios");
+            DropForeignKey("dbo.DocumentosAnexosDaOS", "ResponsavelCriacao_Id", "dbo.Usuarios");
+            DropForeignKey("dbo.OrdemDeServicos", "ResponsavelCriacao_Id", "dbo.Usuarios");
+            DropForeignKey("dbo.OrdemDeServicos", "ResponsavelConclusaoOS_Id", "dbo.Usuarios");
+            DropForeignKey("dbo.LancamentoEventos", "OrdemServico_Id", "dbo.OrdemDeServicos");
             DropForeignKey("dbo.LancamentoEventos", "ResponsavelEvento_Id", "dbo.Usuarios");
             DropForeignKey("dbo.LancamentoEventos", "ResponsavelCriacao_Id", "dbo.Usuarios");
-            DropForeignKey("dbo.OrdemDeServicos", "ResponsavelCriacao_Id", "dbo.Usuarios");
-            DropForeignKey("dbo.OrdemDeServicos", "ResponsavelConclusãoOS_Id", "dbo.Usuarios");
-            DropForeignKey("dbo.LancamentoEventos", "OrdemServico_Id", "dbo.OrdemDeServicos");
-            DropForeignKey("dbo.OrdemDeServicos", "clienteOS_Id", "dbo.Clientes");
             DropForeignKey("dbo.LancamentoEventos", "EventoLancado_Id", "dbo.Eventos");
             DropForeignKey("dbo.Eventos", "ResponsavelCriacao_Id", "dbo.Usuarios");
+            DropForeignKey("dbo.DocumentosAnexosDaOS", "OrdemServico_Id", "dbo.OrdemDeServicos");
+            DropForeignKey("dbo.OrdemDeServicos", "clienteOS_Id", "dbo.Clientes");
             DropForeignKey("dbo.Clientes", "ResponsavelCriacao_Id", "dbo.Usuarios");
+            DropForeignKey("dbo.Contatos", "Clientes_Id", "dbo.Clientes");
+            DropForeignKey("dbo.Contatos", "ResponsavelCriacao_Id", "dbo.Usuarios");
             DropForeignKey("dbo.Setores", "Id", "dbo.Usuarios");
             DropForeignKey("dbo.Usuarios", "ResponsavelCriacao_Id", "dbo.Usuarios");
             DropForeignKey("dbo.Usuarios", "EscritorioUsusario_Id", "dbo.Escritorios");
             DropIndex("dbo.MensagensDados", new[] { "ResponsavelCriacao_Id" });
-            DropIndex("dbo.OrdemDeServicos", new[] { "ResponsavelCriacao_Id" });
-            DropIndex("dbo.OrdemDeServicos", new[] { "ResponsavelConclusãoOS_Id" });
-            DropIndex("dbo.OrdemDeServicos", new[] { "clienteOS_Id" });
             DropIndex("dbo.Eventos", new[] { "ResponsavelCriacao_Id" });
+            DropIndex("dbo.LancamentoEventos", new[] { "OrdemServico_Id" });
             DropIndex("dbo.LancamentoEventos", new[] { "ResponsavelEvento_Id" });
             DropIndex("dbo.LancamentoEventos", new[] { "ResponsavelCriacao_Id" });
-            DropIndex("dbo.LancamentoEventos", new[] { "OrdemServico_Id" });
             DropIndex("dbo.LancamentoEventos", new[] { "EventoLancado_Id" });
+            DropIndex("dbo.OrdemDeServicos", new[] { "ResponsavelCriacao_Id" });
+            DropIndex("dbo.OrdemDeServicos", new[] { "ResponsavelConclusaoOS_Id" });
+            DropIndex("dbo.OrdemDeServicos", new[] { "clienteOS_Id" });
+            DropIndex("dbo.DocumentosAnexosDaOS", new[] { "ResponsavelCriacao_Id" });
+            DropIndex("dbo.DocumentosAnexosDaOS", new[] { "OrdemServico_Id" });
             DropIndex("dbo.Setores", new[] { "Id" });
             DropIndex("dbo.Usuarios", new[] { "ResponsavelCriacao_Id" });
             DropIndex("dbo.Usuarios", new[] { "EscritorioUsusario_Id" });
+            DropIndex("dbo.Contatos", new[] { "Clientes_Id" });
+            DropIndex("dbo.Contatos", new[] { "ResponsavelCriacao_Id" });
             DropIndex("dbo.Clientes", new[] { "ResponsavelCriacao_Id" });
             DropTable("dbo.MensagensDados");
-            DropTable("dbo.OrdemDeServicos");
             DropTable("dbo.Eventos");
             DropTable("dbo.LancamentoEventos");
+            DropTable("dbo.OrdemDeServicos");
+            DropTable("dbo.DocumentosAnexosDaOS");
             DropTable("dbo.Setores");
             DropTable("dbo.Escritorios");
             DropTable("dbo.Usuarios");
+            DropTable("dbo.Contatos");
             DropTable("dbo.Clientes");
         }
     }

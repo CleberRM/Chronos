@@ -17,6 +17,9 @@ namespace br.com.Chronos.AcessoDados
         public DbSet<MensagemDados> MensagensDados { get; set; }
         public DbSet<OrdemDeServico> OrdemDeServicos { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Contato> Contatos { get; set; }
+        public DbSet<DocumentosAnexos> DocumentosAnexosDaOS { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -41,12 +44,23 @@ namespace br.com.Chronos.AcessoDados
             modelBuilder.Entity<OrdemDeServico>().ToTable("OrdemDeServicos")
                 .HasKey(x => x.Id)
                 .HasMany(x => x.EventosDaOS).WithRequired(x => x.OrdemServico);
-            
+                            
             modelBuilder.Entity<OrdemDeServico>().HasRequired(x => x.clienteOS);
 
             modelBuilder.Entity<Cliente>().ToTable("Clientes")
+                .HasKey(x => x.Id)
+                .HasMany(x => x.Contatos).WithRequired(x => x.Clientes);
+
+            modelBuilder.Entity<Contato>().ToTable("Contatos")
+                .HasKey(x => x.Id)
+                .HasRequired(x => x.Clientes);
+
+            modelBuilder.Entity<OrdemDeServico>().ToTable("OrdemDeServicos")
+                .HasKey(x => x.Id)
+                .HasMany(x => x.DocumentosAnexosDaOS).WithRequired(x => x.OrdemServico);
+
+            modelBuilder.Entity<DocumentosAnexos>().ToTable("DocumentosAnexosDaOS")
                 .HasKey(x => x.Id);
-                
 
 
 

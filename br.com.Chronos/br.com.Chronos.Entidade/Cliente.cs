@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.Entidade
 {
-    public class Cliente: AEntidade
+    public class Cliente : AEntidade
     {
-         
+
         public string NomeReduzido { get; set; }
         public string NomeCompleto { get; set; }
         public string CNPJeCPF { get; set; }
@@ -29,6 +29,8 @@ namespace br.com.Chronos.Entidade
         public int VersaoAtual { get; set; }
         public int QuantidadeLicencas { get; set; }
         public int TipoCliente { get; set; }
+        public List<Contato> Contatos {get; set;}
+
 
         public bool ProdutoAcess { get; set; }
         public bool ProdutoOfficecomexMax { get; set; }
