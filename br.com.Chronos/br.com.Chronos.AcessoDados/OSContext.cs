@@ -53,12 +53,14 @@ namespace br.com.Chronos.AcessoDados
             modelBuilder.Entity<LancamentoEvento>().ToTable("LancamentoEventos")
                 .HasKey(x => x.Id)
                 .HasRequired(x => x.EventoLancado);
-            
+
             modelBuilder.Entity<MensagemDados>().ToTable("MensagensDados")
-                .HasKey(x => x.Id);
+                .HasKey(x => x.Id)
+                .HasRequired(x => x.OrdemServico);
 
             modelBuilder.Entity<MotivoOS>().ToTable("MotivosOS")
-                .HasKey(x => x.Id);
+                .HasKey(x => x.Id)
+                .HasRequired(x => x.OrdemServico);
 
             modelBuilder.Entity<OrdemDeServico>().ToTable("OrdemDeServicos")
                 .HasKey(x => x.Id)
@@ -84,13 +86,12 @@ namespace br.com.Chronos.AcessoDados
                 .HasKey(x => x.Id)
                 .HasMany(x => x.FollowCliente).WithRequired(x => x.OrdemServico);
 
-            modelBuilder.Entity<OrdemDeServico>().ToTable("OrdemDeServicos")
-                .HasKey(x => x.Id)
-                .HasMany(x => x.EmailsEnviadosOS).WithRequired(x => x.OrdemServico);
+            //modelBuilder.Entity<OrdemDeServico>().ToTable("OrdemDeServicos")
+            //    .HasKey(x => x.Id)
+            //    .HasMany(x => x.EmailsEnviadosOS).WithRequired(x => x.OrdemServico);
 
-            modelBuilder.Entity<OrdemDeServico>().ToTable("OrdemDeServicos")
-                .HasKey(x => x.Id)
-                .HasMany(x => x.EmailsRecebidosOS).WithRequired(x => x.OrdemServico);
+            modelBuilder.Entity<OrdemDeServico>().HasMany(x => x.EmailsRecebidosOS).WithRequired(x => x.OrdemServico);
+            
 
             modelBuilder.Entity<Setor>().ToTable("Setores")
                 .HasKey(x => x.Id)
@@ -98,7 +99,11 @@ namespace br.com.Chronos.AcessoDados
 
             modelBuilder.Entity<Usuario>().ToTable("Usuarios")
                 .HasKey(x => x.Id)
-                .HasRequired(x => x.EscritorioUsusario);
+                .HasRequired(x => x.EscritorioUsuario);
+
+            modelBuilder.Entity<Usuario>().ToTable("Usuarios")
+                .HasKey(x => x.Id)
+                .HasRequired(x => x.SetorUsuario);
         }
     }
 }

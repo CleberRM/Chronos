@@ -25,8 +25,8 @@ namespace br.com.Chronos.Entidade
         public int RamalUsuario { get; set; }
         public string AssinaturaTexto { get; set; }
 
-        public Escritorio EscritorioUsusario { get; private set; }
-        public Setor Setor { get; private set; }
+        public Escritorio EscritorioUsuario { get; private set; }
+        public Setor SetorUsuario { get; private set; }
         
         //Configuração do Usuário
         public bool Administrador { get; set; }
