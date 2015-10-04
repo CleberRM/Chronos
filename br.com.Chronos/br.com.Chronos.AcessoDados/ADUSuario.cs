@@ -11,11 +11,9 @@ namespace br.com.Chronos.AcessoDados
     public class ADUsuario : IAcoesBanco<Usuario>
     {
         private OSContext _contexto;
-
         public ADUsuario(OSContext contexto)
         {
             _contexto = contexto;
-
         }
 
         public bool ExcluirEntidadePor(int id)
@@ -26,10 +24,8 @@ namespace br.com.Chronos.AcessoDados
                 _contexto.Usuarios.Remove(result);
                 _contexto.SaveChanges();
                 return true;
-
             }
             return false;
-
         }
 
         public Usuario RetornarEntidadePor(int id)
@@ -37,7 +33,6 @@ namespace br.com.Chronos.AcessoDados
             return (from c in _contexto.Usuarios
                     where c.Id == id
                     select c).FirstOrDefault();
-
         }
 
         public IList<Usuario> RetornarLista(Usuario entidade)
@@ -48,7 +43,6 @@ namespace br.com.Chronos.AcessoDados
         public int Salvar(Usuario entidade)
         {
             var result = RetornarEntidadePor(entidade.Id);
-
             if (result != null)
             {
                 _contexto.Entry(result).CurrentValues.SetValues(entidade);
@@ -57,10 +51,8 @@ namespace br.com.Chronos.AcessoDados
             {
                 _contexto.Usuarios.Add(entidade);
             }
-
             _contexto.SaveChanges();
             return entidade.Id;
-
         }
     }
 }

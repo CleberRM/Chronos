@@ -10,7 +10,6 @@ namespace br.com.Chronos.AcessoDados
 {
     public class ADCliente : IAcoesBanco<Cliente>
     {
-
         private OSContext _contexto;
         public ADCliente(OSContext contexto)
         {

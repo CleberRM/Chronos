@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.Entidade
 {
-    class MotivoOS : AEntidade
+    public class MotivoOS : AEntidade
     {
-        string Descricao {get; set;}
+        public string Descricao {get; set;}
+        public int IdOrdemServico { get; set; }
+        public virtual OrdemDeServico OrdemServico { get; set; }
     }
 }

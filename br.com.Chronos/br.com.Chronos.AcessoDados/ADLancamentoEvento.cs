@@ -10,9 +10,7 @@ namespace br.com.Chronos.AcessoDados
 {
     public class ADLancamentoEvento : IAcoesBanco<LancamentoEvento>
     {
-
         private OSContext _contexto;
-
         public ADLancamentoEvento(OSContext contexto)
         {
             _contexto = contexto;
@@ -20,7 +18,6 @@ namespace br.com.Chronos.AcessoDados
 
         public bool ExcluirEntidadePor(int id)
         {
-
             var result = RetornarEntidadePor(id);
             if (result != null)
             {
@@ -29,8 +26,6 @@ namespace br.com.Chronos.AcessoDados
                 return true;
             }
             return false;
-
-
         }
 
         public LancamentoEvento RetornarEntidadePor(int id)
@@ -38,14 +33,11 @@ namespace br.com.Chronos.AcessoDados
             return (from c in _contexto.LancamentoEventos
                     where c.Id == id
                     select c).FirstOrDefault();
-
-
         }
 
         public IList<LancamentoEvento> RetornarLista(LancamentoEvento entidade)
         {
             return _contexto.LancamentoEventos.Where(x => x.StatusEvento.Contains(entidade.StatusEvento)).ToList();
-
         }
 
         public int Salvar(LancamentoEvento entidade)
@@ -59,7 +51,6 @@ namespace br.com.Chronos.AcessoDados
             {
                 _contexto.LancamentoEventos.Add(entidade);
             }
-
             _contexto.SaveChanges();
             return entidade.Id;
         }

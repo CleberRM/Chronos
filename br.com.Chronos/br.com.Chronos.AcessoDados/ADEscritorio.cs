@@ -11,7 +11,6 @@ namespace br.com.Chronos.AcessoDados
     public class ADEscritorio
     {
         private OSContext _contexto;
-
         public ADEscritorio(OSContext contexto)
         {
             _contexto = contexto;
@@ -19,7 +18,6 @@ namespace br.com.Chronos.AcessoDados
 
         public bool ExcluirEntidadePor(int id)
         {
-
             var result = RetornarEntidadePor(id);
             if (result != null)
             {
@@ -32,14 +30,9 @@ namespace br.com.Chronos.AcessoDados
 
         public Escritorio RetornarEntidadePor(int id)
         {
-            using (OSContext contexto = new OSContext())
-            {
-                return (from c in contexto.Escritorios
-                        where c.Id == id
-                        select c).FirstOrDefault();
-
-            }
-
+            return (from c in _contexto.Escritorios
+                    where c.Id == id
+                    select c).FirstOrDefault();
         }
 
         public IList<Escritorio> RetornarLista(Escritorio entidade)
@@ -61,6 +54,5 @@ namespace br.com.Chronos.AcessoDados
             _contexto.SaveChanges();
             return entidade.Id;
         }
-
     }
 }

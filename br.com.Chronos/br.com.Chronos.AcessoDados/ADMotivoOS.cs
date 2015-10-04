@@ -8,48 +8,48 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.AcessoDados
 {
-    public class ADSetor : IAcoesBanco<Setor>
+    public class ADMotivoOS : IAcoesBanco<MotivoOS>
     {
         private OSContext _contexto;
-        public ADSetor(OSContext contexto)
+        public ADMotivoOS(OSContext contexto)
         {
             _contexto = contexto;
         }
-        
+
         public bool ExcluirEntidadePor(int id)
         {
             var result = RetornarEntidadePor(id);
             if (result != null)
             {
-                _contexto.Setores.Remove(result);
+                _contexto.MotivosOS.Remove(result);
                 _contexto.SaveChanges();
                 return true;
             }
             return false;
         }
 
-        public Setor RetornarEntidadePor(int id)
+        public MotivoOS RetornarEntidadePor(int id)
         {
-            return (from c in _contexto.Setores
+            return (from c in _contexto.MotivosOS
                     where c.Id == id
                     select c).FirstOrDefault();
         }
 
-        public IList<Setor> RetornarLista(Setor entidade)
+        public IList<MotivoOS> RetornarLista(MotivoOS entidade)
         {
-            return _contexto.Setores.Where(x => x.Descricao.Contains(entidade.Descricao)).ToList();
+            return _contexto.MotivosOS.Where(x => x.Descricao.Contains(entidade.Descricao)).ToList();
         }
 
-        public int Salvar(Setor entidade)
+        public int Salvar(MotivoOS entidade)
         {
             var result = RetornarEntidadePor(entidade.Id);
-            if (result != null)
+            if (result !=null)
             {
                 _contexto.Entry(result).CurrentValues.SetValues(entidade);
             }
             else
             {
-                _contexto.Setores.Add(entidade);
+                _contexto.MotivosOS.Add(entidade);
             }
             _contexto.SaveChanges();
             return entidade.Id;

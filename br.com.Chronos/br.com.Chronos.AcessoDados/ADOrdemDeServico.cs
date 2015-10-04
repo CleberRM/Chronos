@@ -10,14 +10,11 @@ namespace br.com.Chronos.AcessoDados
 {
     public class ADOrdemDeServico : IAcoesBanco<OrdemDeServico>
     {
-
         private OSContext _contexto;
-
         public ADOrdemDeServico(OSContext contexto)
         {
             _contexto = contexto;
         }
-
 
         public bool ExcluirEntidadePor(int id)
         {
@@ -36,7 +33,6 @@ namespace br.com.Chronos.AcessoDados
             return (from c in _contexto.OrdemDeServicos
                     where c.Id == id
                     select c).FirstOrDefault();
-
         }
 
         public IList<OrdemDeServico> RetornarLista(OrdemDeServico entidade)

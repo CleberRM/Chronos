@@ -58,6 +58,7 @@
     <Compile Include="ADLancamentoEvento.cs" />
     <Compile Include="ADMensagemDados.cs" />
     <Compile Include="ADModalidade.cs" />
+    <Compile Include="ADMotivoOS.cs" />
     <Compile Include="ADOrdemDeServico.cs" />
     <Compile Include="ADSetor.cs" />
     <Compile Include="ADUsuario.cs" />

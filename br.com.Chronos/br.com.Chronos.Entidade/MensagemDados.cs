@@ -14,5 +14,7 @@ namespace br.com.Chronos.Entidade
         public string ComCopiaOculta { get; set; }
         public string Assunto { get; set; }
         public string Mensagem { get; set; }
+        public int IdOrdemServico { get; set; }
+        public virtual OrdemDeServico OrdemServico { get; set; }
     }
 }

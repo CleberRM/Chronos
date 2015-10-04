@@ -10,24 +10,49 @@ namespace br.com.Chronos.AcessoDados
 {
     public class ADModalidade : IAcoesBanco<Modalidade>
     {
+        private OSContext _contexto;
+        public ADModalidade(OSContext contexto)
+        {
+            _contexto = contexto;
+        }
+
         public bool ExcluirEntidadePor(int id)
         {
-            throw new NotImplementedException();
+            var result = RetornarEntidadePor(id);
+            if (result!= null)
+            {
+                _contexto.Modalidades.Remove(result);
+                _contexto.SaveChanges();
+                return true;
+            }
+            return false;
         }
 
         public Modalidade RetornarEntidadePor(int id)
         {
-            throw new NotImplementedException();
+            return (from c in _contexto.Modalidades
+                    where c.Id == id
+                    select c).FirstOrDefault();
         }
 
         public IList<Modalidade> RetornarLista(Modalidade entidade)
         {
-            throw new NotImplementedException();
+            return _contexto.Modalidades.Where(x => x.Descricao.Contains(entidade.Descricao)).ToList();
         }
 
         public int Salvar(Modalidade entidade)
         {
-            throw new NotImplementedException();
+            var result = RetornarEntidadePor(entidade.Id);
+            if (result != null)
+            {
+                _contexto.Entry(result).CurrentValues.SetValues(entidade);
+            }
+            else
+            {
+                _contexto.Modalidades.Add(entidade);
+            }
+            _contexto.SaveChanges();
+            return entidade.Id;
         }
     }
 }

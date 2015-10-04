@@ -11,7 +11,6 @@ namespace br.com.Chronos.AcessoDados
     public class ADMensagemDados : IAcoesBanco<MensagemDados>
     {
         private OSContext _contexto;
-
         public ADMensagemDados(OSContext contexto)
         {
             _contexto = contexto;
@@ -27,7 +26,6 @@ namespace br.com.Chronos.AcessoDados
                 return true;
             }
             return false;
-
         }
 
         public MensagemDados RetornarEntidadePor(int id)
@@ -55,8 +53,6 @@ namespace br.com.Chronos.AcessoDados
                 }
                 _contexto.SaveChanges();
                 return entidade.Id;
-
-            
         }
     }
 }
