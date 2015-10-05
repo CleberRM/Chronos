@@ -8,13 +8,13 @@ namespace br.com.Chronos.Entidade
 {
     public class LancamentoEvento : AEntidade
     {
-        public LancamentoEvento(Eventos evento)
+        public LancamentoEvento(Evento evento)
         {
             EventoLancado = evento;
         }
 
        
-        public Eventos EventoLancado { get; private set; }
+        public Evento EventoLancado { get; private set; }
         public Usuario ResponsavelEvento { get; set; }
         public DateTime DataPrevistaConclusao { get; set; }
         public DateTime DataConclusao { get; set; }

@@ -14,7 +14,7 @@ namespace br.com.Chronos.AcessoDados
         public DbSet<Contato> Contatos { get; set; }
         public DbSet<DocumentosAnexos> DocumentosAnexosDaOS { get; set; }
         public DbSet<Escritorio> Escritorios { get; set; }
-        public DbSet<Eventos> EventosDaOS { get; set; }
+        public DbSet<Evento> Eventos { get; set; }
         public DbSet<FollowUpOSCliente> FollowUpOSClientes { get; set; }
         public DbSet<LancamentoEvento> LancamentoEventos { get; set; }
         public DbSet<MensagemDados> MensagensDados { get; set; }
@@ -40,7 +40,7 @@ namespace br.com.Chronos.AcessoDados
             modelBuilder.Entity<Escritorio>().ToTable("Escritorios")
                 .HasKey(x => x.Id);
 
-            modelBuilder.Entity<Eventos>().ToTable("EventosDaOS")
+            modelBuilder.Entity<Evento>().ToTable("Eventos")
                 .HasKey(x => x.Id);
 
             modelBuilder.Entity<FollowUpOSCliente>().ToTable("FollowUpOSClientes")
@@ -51,7 +51,6 @@ namespace br.com.Chronos.AcessoDados
                 .HasRequired(x => x.ResponsavelEvento);
 
             modelBuilder.Entity<LancamentoEvento>().ToTable("LancamentoEventos")
-                .HasKey(x => x.Id)
                 .HasRequired(x => x.EventoLancado);
 
             modelBuilder.Entity<MensagemDados>().ToTable("MensagensDados")
@@ -91,12 +90,11 @@ namespace br.com.Chronos.AcessoDados
             //    .HasMany(x => x.EmailsEnviadosOS).WithRequired(x => x.OrdemServico);
 
             modelBuilder.Entity<OrdemDeServico>().HasMany(x => x.EmailsRecebidosOS).WithRequired(x => x.OrdemServico);
-            
+
 
             modelBuilder.Entity<Setor>().ToTable("Setores")
-                .HasKey(x => x.Id)
-                .HasRequired(x => x.ResponsavelCriacao);
-
+                .HasKey(x => x.Id);
+                
             modelBuilder.Entity<Usuario>().ToTable("Usuarios")
                 .HasKey(x => x.Id)
                 .HasRequired(x => x.EscritorioUsuario);

@@ -55,7 +55,7 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Contato.cs" />
     <Compile Include="Escritorio.cs" />
-    <Compile Include="Eventos.cs" />
+    <Compile Include="Evento.cs" />
     <Compile Include="AEntidade.cs" />
     <Compile Include="MensagemDados.cs" />
     <Compile Include="Modalidade.cs" />

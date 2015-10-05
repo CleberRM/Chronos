@@ -12,7 +12,7 @@ namespace br.com.Chronos.DependencyInjection
             container.Register<IAcoesBanco<Cliente>, ADCliente>();
             container.Register<IAcoesBanco<Contato>, ADContato>();
             container.Register<IAcoesBanco<DocumentosAnexos>, ADDocumentosAnexos>();
-            container.Register<IAcoesBanco<Eventos>, ADEventos>();
+            container.Register<IAcoesBanco<Evento>, ADEvento>();
             //container.Register<IAcoesBanco<Escritorio>, ADEscritorio>();
             container.Register<IAcoesBanco<FollowUpOSCliente>, ADFollowUpOSCliente>();
             container.Register<IAcoesBanco<LancamentoEvento>, ADLancamentoEvento>();
@@ -26,7 +26,7 @@ namespace br.com.Chronos.DependencyInjection
             container.Register<ANegocio<Cliente>, BLCliente>();
             container.Register<ANegocio<Contato>, BLContato>();
             container.Register<ANegocio<DocumentosAnexos>,BLDocumentosAnexos>();
-            container.Register<ANegocio<Eventos>, BLEventos>();
+            container.Register<ANegocio<Evento>, BLEventos>();
             //container.Register<ANegocio<Escritorio>, BLEscritorio>();
             container.Register<ANegocio<FollowUpOSCliente>, BLFollowUpOSCliente>();
             container.Register<ANegocio<Modalidade>, BLModalidade>();

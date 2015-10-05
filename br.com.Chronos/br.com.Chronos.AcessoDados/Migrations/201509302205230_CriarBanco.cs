@@ -141,11 +141,11 @@ namespace br.com.Chronos.AcessoDados.Migrations
                         Descricao = c.String(),
                         DataCriacao = c.DateTime(nullable: false),
                         IdResponsavelCriacao = c.Int(nullable: false),
-                        ResponsavelCriacao_Id = c.Int(nullable: false),
+                        ResponsavelCriacao_Id = c.Int(),
                         Usuario_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Usuarios", t => t.ResponsavelCriacao_Id, cascadeDelete: true)
+                .ForeignKey("dbo.Usuarios", t => t.ResponsavelCriacao_Id)
                 .ForeignKey("dbo.Usuarios", t => t.Usuario_Id)
                 .Index(t => t.ResponsavelCriacao_Id)
                 .Index(t => t.Usuario_Id);
