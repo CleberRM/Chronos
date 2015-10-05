@@ -120,4 +120,7 @@
   <data name="NomeProjeto" xml:space="preserve">
     <value>Projeto Chronos</value>
   </data>
+  <data name="NomeSetor" xml:space="preserve">
+    <value>Setor</value>
+  </data>
 </root>

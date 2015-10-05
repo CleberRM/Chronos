@@ -68,5 +68,14 @@ namespace br.com.Chronos.WebUI.Resources {
                 return ResourceManager.GetString("NomeProjeto", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Setor.
+        /// </summary>
+        public static string NomeSetor {
+            get {
+                return ResourceManager.GetString("NomeSetor", resourceCulture);
+            }
+        }
     }
 }
