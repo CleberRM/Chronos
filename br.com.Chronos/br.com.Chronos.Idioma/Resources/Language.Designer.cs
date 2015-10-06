@@ -24,7 +24,7 @@ namespace br.com.Chronos.Idioma.Resources {
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Language {
         
-private static global::System.Resources.ResourceManager resourceMan;
+        private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
@@ -57,6 +57,15 @@ private static global::System.Resources.ResourceManager resourceMan;
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cadastros.
+        /// </summary>
+        public static string Cadastros {
+            get {
+                return ResourceManager.GetString("Cadastros", resourceCulture);
             }
         }
         
