@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace br.com.Chronos.Entidade
 
         public List<Contato> Contatos { get; set; }
 
+        [DisplayName("Nome")]
         public string NomeReduzido { get; set; }
         public string NomeCompleto { get; set; }
         public string CNPJeCPF { get; set; }
