@@ -4,6 +4,9 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using br.com.Chronos.Idioma.Resources;
 
 namespace br.com.Chronos.Entidade
 {
@@ -12,7 +15,7 @@ namespace br.com.Chronos.Entidade
 
         public List<Contato> Contatos { get; set; }
 
-        [DisplayName("Nome")]
+        [Display(ResourceType = typeof(Language), Name = "NomeReduzido")]
         public string NomeReduzido { get; set; }
         public string NomeCompleto { get; set; }
         public string CNPJeCPF { get; set; }
