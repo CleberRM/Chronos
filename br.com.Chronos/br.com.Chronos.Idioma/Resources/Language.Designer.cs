@@ -61,6 +61,15 @@ namespace br.com.Chronos.Idioma.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        public static string Login {
+            get {
+                return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Projeto Chronos.
         /// </summary>
         public static string NomeProjeto {
@@ -79,11 +88,29 @@ namespace br.com.Chronos.Idioma.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Senha.
+        /// </summary>
+        public static string Senha {
+            get {
+                return ResourceManager.GetString("Senha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Setor.
         /// </summary>
         public static string Setor {
             get {
                 return ResourceManager.GetString("Setor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Usuário.
+        /// </summary>
+        public static string Usuario {
+            get {
+                return ResourceManager.GetString("Usuario", resourceCulture);
             }
         }
     }

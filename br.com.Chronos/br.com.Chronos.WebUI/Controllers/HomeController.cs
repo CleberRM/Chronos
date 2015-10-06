@@ -21,5 +21,10 @@ namespace br.com.Chronos.WebUI.Controllers
         {
             return View();
         }
+
+        public ActionResult Login(string usuario, string senha)
+        {
+            return View("Index");
+        }
     }
 }
