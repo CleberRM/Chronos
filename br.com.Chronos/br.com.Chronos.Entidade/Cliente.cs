@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,7 +36,7 @@ namespace br.com.Chronos.Entidade
         public int VersaoAtual { get; set; }
         public int QuantidadeLicencas { get; set; }
         public int TipoCliente { get; set; }
-
+        
         public bool ProdutoAcess { get; set; }
         public bool ProdutoOfficecomexMax { get; set; }
         public bool ProdutoOfficecomexInternacional { get; set; }
