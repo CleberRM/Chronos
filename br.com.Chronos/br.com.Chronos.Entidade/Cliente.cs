@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using br.com.Chronos.Idioma.Resources;
 
 namespace br.com.Chronos.Entidade
 {
@@ -11,6 +14,7 @@ namespace br.com.Chronos.Entidade
 
         public List<Contato> Contatos { get; set; }
 
+        [Display(ResourceType = typeof(Language), Name = "NomeReduzido")]
         public string NomeReduzido { get; set; }
         public string NomeCompleto { get; set; }
         public string CNPJeCPF { get; set; }
@@ -31,7 +35,7 @@ namespace br.com.Chronos.Entidade
         public int VersaoAtual { get; set; }
         public int QuantidadeLicencas { get; set; }
         public int TipoCliente { get; set; }
-        
+
         public bool ProdutoAcess { get; set; }
         public bool ProdutoOfficecomexMax { get; set; }
         public bool ProdutoOfficecomexInternacional { get; set; }
