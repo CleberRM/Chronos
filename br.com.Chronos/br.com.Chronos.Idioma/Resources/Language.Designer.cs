@@ -24,7 +24,7 @@ namespace br.com.Chronos.Idioma.Resources {
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Language {
         
-        private static global::System.Resources.ResourceManager resourceMan;
+private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
