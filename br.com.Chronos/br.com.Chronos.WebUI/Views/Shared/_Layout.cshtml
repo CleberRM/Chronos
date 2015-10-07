@@ -7,9 +7,15 @@
     <title>@Language.NomeProjeto</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap-responsive.min.css" rel="stylesheet">
+    <link id="base-style" href="~/Content/style.css" rel="stylesheet">
+    <link id="base-style-responsive" href="~/Content/style-responsive.css" rel="stylesheet">
+
     @RenderSection("style", false)
 </head>
 <body>
+    
+
     <div id="cabecalho" class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -21,34 +27,49 @@
                 </button>
                 <a class="navbar-brand" href="#">@Language.NomeProjeto</a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        @Html.ActionLink("Login", "Index", "Home", null, new { @class = "navbar-brand" })
-                    </li>
-                    <li class="dropdown open ">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" >
-                            @Language.Cadastros
-                            <span  class="caret"></span>
-                            
-                        </a>
-                        <ul  class="dropdown-menu">
-                            <li>
-                                @Html.ActionLink(Language.Setor, "Index", "Setor", null, new { @class = "navbar-brand" })
-                            </li>
-                            <li>
-                                @Html.ActionLink(Language.Cliente, "Index", "Cliente", null, new { @class = "navbar-brand" })
-                            </li>
-                            <li>
-                                @Html.ActionLink("Eventos", "Index", "Eventos", null, new { @class = "navbar-brand" })
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            
         </div>
     </div>
+      
+            <div id="sidebar-left" class="span2">
+                <div class="nav-collapse sidebar-nav">
+                    <ul class="nav nav-tabs nav-stacked main-menu">
+                        <li class="active">
+                            @Html.ActionLink("Login", "Index", "Home", null, new { @class = "hidden-tablet" })
+                                <i class="icon-bar-chart">
+
+                                </i>
+                        </li>
+                        <li>
+                            <a class="dropmenu" href="#">
+                                <i class="icon-folder-close-alt">
+
+                                </i>
+                                <span class="hidden-tablet">Cadastros</span>
+                            </a>
+                            <ul style="display:block;">
+                                <a class="dropmenu" href="#"></a>
+                                <li>
+                                    @Html.ActionLink(Language.Cliente, "Index", "Cliente", null, new { @class = "submenu" })
+                                    <i class="icon-file-alt"></i>
+                                </li>
+                                <li>
+                                    @Html.ActionLink(Language.Setor, "Index", "Setor", null, new { @class = "submenu" })
+                                    <i class="icon-file-alt"></i>
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Eventos", "Index", "Eventos", null, new { @class = "submenu" })
+                                    <i class="icon-file-alt"></i>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            
+        
+    
     <div id="wrapper">
         <div id="corpo">
             @RenderBody()
@@ -61,5 +82,6 @@
     </div>
     <script src="~/Scripts/jquery-2.1.4.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.10.0.custom.min.js"></script>
 </body>
 </html>
