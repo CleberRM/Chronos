@@ -108,6 +108,7 @@
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\halflings.css" />
     <Content Include="Content\pages\homeIndex.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\style-responsive.css" />
