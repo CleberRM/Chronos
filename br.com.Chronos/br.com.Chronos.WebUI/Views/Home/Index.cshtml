@@ -1,4 +1,32 @@
-﻿@using br.com.Chronos.WebUI.Resources
+﻿@using br.com.Chronos.Idioma.Resources
 
-<h2>@Language.NomeProjeto</h2>
-
+@section style{
+    <link href="~/Content/pages/homeIndex.css" rel="stylesheet" type="text/css" />
+}
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+    <div id="login">
+        <div class="col-md-12">
+            <h3>@Language.Login</h3>
+            <hr />
+            <div class="col-md-12 form-group">
+                <label for="Usuario" class="col-md-2">@Language.Usuario:</label>
+                <div class="col-md-10">
+                    <input type="text" id="Usuario" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-12 form-group">
+                <label for="Senha" class="col-md-2">@Language.Senha:</label>
+                <div class="col-md-10">
+                    <input type="password" id="Senha" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-12">
+                <hr />
+                <button type="submit" id="cmdLogin" class="btn btn-default pull-right">
+                    @Language.Login
+                </button>
+            </div>
+        </div>
+    </div>
+}

@@ -1,4 +1,4 @@
-﻿@using br.com.Chronos.WebUI.Resources
+﻿@using br.com.Chronos.Idioma.Resources
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,19 +7,46 @@
     <title>@Language.NomeProjeto</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    @RenderSection("style", false)
 </head>
 <body>
-    <div id="cabecalho" class="navbar navbar-default navbar-fixed-top">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            @Html.ActionLink(Language.NomeProjeto, "Index", "Home", null, new { @class = "navbar-brand" })
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav"></ul>
+    <div id="cabecalho" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapse" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">@Language.NomeProjeto</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        @Html.ActionLink("Login", "Index", "Home", null, new { @class = "navbar-brand" })
+                    </li>
+                    <li class="dropdown open ">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" >
+                            @Language.Cadastros
+                            <span  class="caret"></span>
+                            
+                        </a>
+                        <ul  class="dropdown-menu">
+                            <li>
+                                @Html.ActionLink(Language.Setor, "Index", "Setor", null, new { @class = "navbar-brand" })
+                            </li>
+                            <li>
+                                @Html.ActionLink(Language.Cliente, "Index", "Cliente", null, new { @class = "navbar-brand" })
+                            </li>
+                            <li>
+                                @Html.ActionLink("Eventos", "Index", "Eventos", null, new { @class = "navbar-brand" })
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
         </div>
     </div>
     <div id="wrapper">

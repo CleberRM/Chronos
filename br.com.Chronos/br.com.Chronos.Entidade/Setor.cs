@@ -1,4 +1,5 @@
-﻿using System;
+﻿using br.com.Chronos.Idioma.Resources;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -10,6 +11,7 @@ namespace br.com.Chronos.Entidade
 {
     public class Setor : AEntidade
     {
+        [Display(ResourceType = typeof(Language), Name = "Descricao")]
         public string Descricao { get; set; }
         public virtual Usuario Usuario { get; set; }
     }

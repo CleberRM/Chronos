@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace br.com.Chronos.WebUI.Resources {
+namespace br.com.Chronos.Idioma.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace br.com.Chronos.WebUI.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("br.com.Chronos.WebUI.Resources.Language", typeof(Language).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("br.com.Chronos.Idioma.Resources.Language", typeof(Language).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,6 +61,51 @@ namespace br.com.Chronos.WebUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cadastros.
+        /// </summary>
+        public static string Cadastros {
+            get {
+                return ResourceManager.GetString("Cadastros", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cliente.
+        /// </summary>
+        public static string Cliente {
+            get {
+                return ResourceManager.GetString("Cliente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Descrição.
+        /// </summary>
+        public static string Descricao {
+            get {
+                return ResourceManager.GetString("Descricao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eventos.
+        /// </summary>
+        public static string Eventos {
+            get {
+                return ResourceManager.GetString("Eventos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        public static string Login {
+            get {
+                return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Projeto Chronos.
         /// </summary>
         public static string NomeProjeto {
@@ -70,11 +115,38 @@ namespace br.com.Chronos.WebUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Nome Reduzido.
+        /// </summary>
+        public static string NomeReduzido {
+            get {
+                return ResourceManager.GetString("NomeReduzido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Senha.
+        /// </summary>
+        public static string Senha {
+            get {
+                return ResourceManager.GetString("Senha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Setor.
         /// </summary>
-        public static string NomeSetor {
+        public static string Setor {
             get {
-                return ResourceManager.GetString("NomeSetor", resourceCulture);
+                return ResourceManager.GetString("Setor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Usuário.
+        /// </summary>
+        public static string Usuario {
+            get {
+                return ResourceManager.GetString("Usuario", resourceCulture);
             }
         }
     }

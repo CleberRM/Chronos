@@ -8,23 +8,18 @@ using System.Web.Mvc;
 
 namespace br.com.Chronos.WebUI.Controllers
 {
-    public class HomeController : Controller
+    public class SetorController : Controller
     {
-        private ANegocio<Usuario> _blUsuario;
-        public HomeController(ANegocio<Usuario> blUsuario)
+        private ANegocio<Setor> _blSetor;
+        public SetorController(ANegocio<Setor> blSetor)
         {
-            this._blUsuario = blUsuario;
+            this._blSetor = blSetor;
         }
 
-        // GET: Home
+        // GET: Setor
         public ActionResult Index()
         {
             return View();
-        }
-
-        public ActionResult Login(string usuario, string senha)
-        {
-            return View("Index");
         }
     }
 }
