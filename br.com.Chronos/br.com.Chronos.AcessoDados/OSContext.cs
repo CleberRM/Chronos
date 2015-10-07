@@ -154,7 +154,6 @@ namespace br.com.Chronos.AcessoDados
                 .WithMany()
                 .HasForeignKey(x => x.IdResponsavelCriacao)
                 .WillCascadeOnDelete(false);
-
         }
     }
 }
