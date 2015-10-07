@@ -120,6 +120,15 @@
   <data name="Cadastros" xml:space="preserve">
     <value>Cadastros</value>
   </data>
+  <data name="Cliente" xml:space="preserve">
+    <value>Cliente</value>
+  </data>
+  <data name="Descricao" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="Eventos" xml:space="preserve">
+    <value>Eventos</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
   </data>

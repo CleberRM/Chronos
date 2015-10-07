@@ -39,7 +39,7 @@ namespace br.com.Chronos.Idioma.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("br.com.Chronos.Language.Resources.Language", typeof(Language).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("br.com.Chronos.Idioma.Resources.Language", typeof(Language).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -66,6 +66,33 @@ namespace br.com.Chronos.Idioma.Resources {
         public static string Cadastros {
             get {
                 return ResourceManager.GetString("Cadastros", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cliente.
+        /// </summary>
+        public static string Cliente {
+            get {
+                return ResourceManager.GetString("Cliente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Descrição.
+        /// </summary>
+        public static string Descricao {
+            get {
+                return ResourceManager.GetString("Descricao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eventos.
+        /// </summary>
+        public static string Eventos {
+            get {
+                return ResourceManager.GetString("Eventos", resourceCulture);
             }
         }
         
