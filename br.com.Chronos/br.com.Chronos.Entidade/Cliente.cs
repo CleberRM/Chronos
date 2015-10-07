@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
-/using br.com.Chronos.Idioma.Resources;
+using br.com.Chronos.Idioma.Resources;
 
 namespace br.com.Chronos.Entidade
 {
