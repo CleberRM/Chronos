@@ -11,8 +11,8 @@ namespace br.com.Chronos.WebUI.Controllers
     public class EventosController : Controller
     {
 
-        private ANegocio<Eventos> _blEventos;
-        public EventosController(ANegocio<Eventos> blEventos)
+        private ANegocio<Evento> _blEventos;
+        public EventosController(ANegocio<Evento> blEventos)
         {
             this._blEventos = blEventos;
         }

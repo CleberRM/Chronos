@@ -10,7 +10,7 @@ namespace br.com.Chronos.Entidade
     {
         public string NomeDocumento {get; set;}
         public string CaminhoDocumento { get; set; }
-        public int IdOS { get; set; }
+        public int IdOrdemServico { get; set; }
         public virtual OrdemDeServico OrdemServico { get; set; }
     }
 

@@ -26,26 +26,48 @@ namespace br.com.Chronos.AcessoDados
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+
             modelBuilder.Entity<Cliente>().ToTable("Clientes")
                 .HasKey(x => x.Id)
                 .HasMany(x => x.Contatos).WithRequired(x => x.Clientes);
 
+            modelBuilder.Entity<Cliente>().ToTable("Clientes")
+                .HasRequired(x => x.ResponsavelCriacao)
+                .WithMany()
+                .HasForeignKey(x => x.IdResponsavelCriacao);
+
             modelBuilder.Entity<Contato>().ToTable("Contatos")
                 .HasKey(x => x.Id)
-                .HasRequired(x => x.Clientes);
+                .HasRequired(x => x.Clientes)
+                .WithMany()
+                .HasForeignKey(x => x.IdCliente);
+
+            modelBuilder.Entity<Contato>().ToTable("Contatos")
+                .HasRequired(x => x.ResponsavelCriacao)
+                .WithMany()
+                .HasForeignKey(x => x.IdResponsavelCriacao);
 
             modelBuilder.Entity<DocumentosAnexos>().ToTable("DocumentosAnexosDaOS")
-                .HasKey(x => x.Id);
+                .HasKey(x => x.Id)
+                .HasRequired(x => x.ResponsavelCriacao)
+                .WithMany()
+                .HasForeignKey(x => x.IdResponsavelCriacao);
 
             modelBuilder.Entity<Escritorio>().ToTable("Escritorios")
                 .HasKey(x => x.Id);
 
             modelBuilder.Entity<Evento>().ToTable("Eventos")
-                .HasKey(x => x.Id);
+                .HasKey(x => x.Id)
+                .HasRequired(x => x.ResponsavelCriacao)
+                .WithMany()
+                .HasForeignKey(x => x.IdResponsavelCriacao);
 
             modelBuilder.Entity<FollowUpOSCliente>().ToTable("FollowUpOSClientes")
-                .HasKey(x => x.Id);
-                
+                .HasKey(x => x.Id)
+                .HasRequired(x => x.ResponsavelCriacao)
+                .WithMany()
+                .HasForeignKey(x => x.IdResponsavelCriacao);
+
             modelBuilder.Entity<LancamentoEvento>().ToTable("LancamentoEventos")
                 .HasKey(x => x.Id)
                 .HasRequired(x => x.ResponsavelEvento);
@@ -53,55 +75,86 @@ namespace br.com.Chronos.AcessoDados
             modelBuilder.Entity<LancamentoEvento>().ToTable("LancamentoEventos")
                 .HasRequired(x => x.EventoLancado);
 
+            modelBuilder.Entity<LancamentoEvento>().ToTable("LancamentoEventos")
+                .HasRequired(x => x.ResponsavelCriacao)
+                .WithMany()
+                .HasForeignKey(x => x.IdResponsavelCriacao);
+
             modelBuilder.Entity<MensagemDados>().ToTable("MensagensDados")
                 .HasKey(x => x.Id)
-                .HasRequired(x => x.OrdemServico);
+                .HasRequired(x => x.OrdemServico)
+                .WithMany()
+                .HasForeignKey(x => x.IdOrdemServico);
+
+            modelBuilder.Entity<MensagemDados>().ToTable("MensagemDados")
+                .HasKey(x => x.Id)
+                .HasRequired(x => x.ResponsavelCriacao)
+                .WithMany()
+                .HasForeignKey(x => x.IdResponsavelCriacao);
 
             modelBuilder.Entity<MotivoOS>().ToTable("MotivosOS")
                 .HasKey(x => x.Id)
                 .HasRequired(x => x.OrdemServico);
 
-            modelBuilder.Entity<OrdemDeServico>().ToTable("OrdemDeServicos")
-                .HasKey(x => x.Id)
-                .HasRequired(x => x.clienteOS);
+            modelBuilder.Entity<MotivoOS>().ToTable("MotivosOS")
+                .HasRequired(x => x.ResponsavelCriacao)
+                .WithMany()
+                .HasForeignKey(x => x.IdResponsavelCriacao);
 
             modelBuilder.Entity<OrdemDeServico>().ToTable("OrdemDeServicos")
                 .HasKey(x => x.Id)
-                .HasMany(x => x.EventosDaOS).WithRequired(x => x.OrdemServico);
+                .HasRequired(x => x.clienteOS);                
 
             modelBuilder.Entity<OrdemDeServico>().ToTable("OrdemDeServicos")
                 .HasKey(x => x.Id)
-                .HasMany(x => x.ModalidadeDaOS).WithRequired(x => x.OrdemServico);
+                .HasMany(x => x.EventosDaOS)
+                .WithRequired(x => x.OrdemServico)
+                .HasForeignKey(x => x.IdOrdemServico);
 
             modelBuilder.Entity<OrdemDeServico>().ToTable("OrdemDeServicos")
                 .HasKey(x => x.Id)
-                .HasMany(x => x.DocumentosAnexosDaOS).WithRequired(x => x.OrdemServico);
+                .HasMany(x => x.ModalidadeDaOS)
+                .WithRequired(x => x.OrdemServico)
+                .HasForeignKey(x => x.IdOrdemServico);
 
             modelBuilder.Entity<OrdemDeServico>().ToTable("OrdemDeServicos")
                 .HasKey(x => x.Id)
-                .HasMany(x => x.MotivoAberturaOS).WithRequired(x => x.OrdemServico);
+                .HasMany(x => x.DocumentosAnexosDaOS)
+                .WithRequired(x => x.OrdemServico)
+                .HasForeignKey(x => x.IdOrdemServico);
 
             modelBuilder.Entity<OrdemDeServico>().ToTable("OrdemDeServicos")
                 .HasKey(x => x.Id)
-                .HasMany(x => x.FollowCliente).WithRequired(x => x.OrdemServico);
+                .HasMany(x => x.MotivoAberturaOS)
+                .WithRequired(x => x.OrdemServico)
+                .HasForeignKey(x => x.IdOrdemServico);
 
-            //modelBuilder.Entity<OrdemDeServico>().ToTable("OrdemDeServicos")
-            //    .HasKey(x => x.Id)
-            //    .HasMany(x => x.EmailsEnviadosOS).WithRequired(x => x.OrdemServico);
+            modelBuilder.Entity<OrdemDeServico>().ToTable("OrdemDeServicos")
+                .HasMany(x => x.EmailsRecebidosOS)
+                .WithRequired(x => x.OrdemServico)
+                .HasForeignKey(x => x.IdOrdemServico);
 
-            modelBuilder.Entity<OrdemDeServico>().HasMany(x => x.EmailsRecebidosOS).WithRequired(x => x.OrdemServico);
+            modelBuilder.Entity<OrdemDeServico>().ToTable("OrdemDeServicos")
+                .HasRequired(x => x.ResponsavelCriacao)
+                .WithMany()
+                .HasForeignKey(x => x.IdResponsavelCriacao)
+                .WillCascadeOnDelete(false);
 
 
             modelBuilder.Entity<Setor>().ToTable("Setores")
-                .HasKey(x => x.Id);
-                
-            modelBuilder.Entity<Usuario>().ToTable("Usuarios")
                 .HasKey(x => x.Id)
-                .HasRequired(x => x.EscritorioUsuario);
+                .HasRequired(x => x.ResponsavelCriacao)
+                .WithMany()
+                .HasForeignKey(x => x.IdResponsavelCriacao)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Usuario>().ToTable("Usuarios")
                 .HasKey(x => x.Id)
-                .HasRequired(x => x.SetorUsuario);
+                .HasRequired(x => x.ResponsavelCriacao)
+                .WithMany()
+                .HasForeignKey(x => x.IdResponsavelCriacao)
+                .WillCascadeOnDelete(false);
+
         }
     }
 }
