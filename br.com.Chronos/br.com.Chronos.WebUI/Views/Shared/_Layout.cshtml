@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@Language.NomeProjeto</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link id="bootstrap-style" href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap-responsive.min.css" rel="stylesheet">
     <link id="base-style" href="~/Content/style.css" rel="stylesheet">
     <link id="base-style-responsive" href="~/Content/style-responsive.css" rel="stylesheet">
@@ -46,7 +46,7 @@
                                 </i>
                                 <span class="hidden-tablet">Cadastros</span>
                             </a>
-                            <ul style="display:block;">
+                            <ul style="display: block;">
                                 <a class="dropmenu" href="#"></a>
                                 <li>
                                     @Html.ActionLink(Language.Cliente, "Index", "Cliente", null, new { @class = "submenu" })
@@ -83,5 +83,7 @@
     <script src="~/Scripts/jquery-2.1.4.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/jquery-ui-1.10.0.custom.min.js"></script>
+    <script src="~/Scripts/jquery-migrate-1.0.0.min.js"></script>
+
 </body>
 </html>
