@@ -138,7 +138,7 @@ namespace br.com.Chronos.AcessoDados
                 .HasRequired(x => x.ResponsavelCriacao)
                 .WithMany()
                 .HasForeignKey(x => x.IdResponsavelCriacao)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(false); 
 
 
             modelBuilder.Entity<Setor>().ToTable("Setores")
