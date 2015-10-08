@@ -1,6 +1,6 @@
 ﻿body {
     padding-top: 70px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     width: 100%;
 }
 
@@ -12,8 +12,9 @@
 
 #cabecalho {
     color: #FFFFFF;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 0%;
+    padding-right: 100%;
+
 }
 
 #wrapper {
@@ -28,12 +29,15 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    padding-top: 200px;
+    padding-top: 50px;
     top: 100%;
+    
 }
 
 #rodape footer{
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 5%;
+    position: absolute;
+    top: 100%;
 }
