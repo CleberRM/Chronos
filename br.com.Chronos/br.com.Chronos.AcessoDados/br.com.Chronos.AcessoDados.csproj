@@ -56,7 +56,7 @@
     <Compile Include="ADEvento.cs" />
     <Compile Include="ADFollowUpOSCliente.cs" />
     <Compile Include="ADLancamentoEvento.cs" />
-    <Compile Include="ADMensagemDados.cs" />
+    <Compile Include="ADEmail.cs" />
     <Compile Include="ADModalidade.cs" />
     <Compile Include="ADMotivoOS.cs" />
     <Compile Include="ADOrdemDeServico.cs" />

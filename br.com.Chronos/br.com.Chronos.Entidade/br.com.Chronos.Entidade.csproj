@@ -57,7 +57,7 @@
     <Compile Include="Escritorio.cs" />
     <Compile Include="Evento.cs" />
     <Compile Include="AEntidade.cs" />
-    <Compile Include="MensagemDados.cs" />
+    <Compile Include="Email.cs" />
     <Compile Include="Modalidade.cs" />
     <Compile Include="MotivoOS.cs" />
     <Compile Include="OrdemDeServico.cs" />
