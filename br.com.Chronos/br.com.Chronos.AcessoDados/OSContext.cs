@@ -23,6 +23,9 @@ namespace br.com.Chronos.AcessoDados
         public DbSet<OrdemDeServico> OrdemDeServicos { get; set; }
         public DbSet<Setor> Setores { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
+        public DbSet<ProdutoCliente> ProdutosCliente { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -47,6 +50,20 @@ namespace br.com.Chronos.AcessoDados
                 .WithMany()
                 .HasForeignKey(x => x.IdResponsavelCriacao);
 
+            modelBuilder.Entity<ProdutoCliente>().ToTable("ProdutosCliente")
+                .HasKey(x => x.Id)
+                .HasRequired(x => x.ResponsavelCriacao)
+                .WithMany()
+                .HasForeignKey(x => x.IdResponsavelCriacao);
+
+            modelBuilder.Entity<ProdutoCliente>().ToTable("ProdutosCliente")
+                .HasRequired(x => x.Cliente)
+                .WithMany()
+                .HasForeignKey(x => x.IdCliente);
+
+            modelBuilder.Entity<ProdutoCliente>().ToTable("ProdutosCliente")
+                .HasRequired(x => x.Descricao);
+             
             modelBuilder.Entity<DocumentosAnexos>().ToTable("DocumentosAnexosDaOS")
                 .HasKey(x => x.Id)
                 .HasRequired(x => x.ResponsavelCriacao)
@@ -90,6 +107,15 @@ namespace br.com.Chronos.AcessoDados
                 .HasRequired(x => x.ResponsavelCriacao)
                 .WithMany()
                 .HasForeignKey(x => x.IdResponsavelCriacao);
+
+            modelBuilder.Entity<Produto>().ToTable("Produtos")
+                .HasKey(x => x.Id)
+                .HasRequired(x => x.ResponsavelCriacao)
+                .WithMany()
+                .HasForeignKey(x => x.IdResponsavelCriacao);
+
+            modelBuilder.Entity<Produto>().ToTable("Produtos")
+                .HasRequired(x => x.Modalidade);
 
             modelBuilder.Entity<MotivoOS>().ToTable("MotivosDaOS")
                 .HasRequired(x => x.ResponsavelCriacao)

@@ -37,7 +37,7 @@ namespace br.com.Chronos.AcessoDados
 
         public IList<Modalidade> RetornarLista(Modalidade entidade)
         {
-            return _contexto.Modalidades.Where(x => x.Descricao.Contains(entidade.Descricao)).ToList();
+            throw new NotImplementedException();
         }
 
         public int Salvar(Modalidade entidade)

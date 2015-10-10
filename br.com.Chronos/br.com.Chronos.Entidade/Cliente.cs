@@ -12,7 +12,14 @@ namespace br.com.Chronos.Entidade
     public class Cliente : AEntidade
     {
 
+        public Cliente()
+        {
+            Contatos = new List<Contato>();
+            ProdutosAdquiridos = new List<ProdutoCliente>();
+        }
+
         public List<Contato> Contatos { get; set; }
+        public List<ProdutoCliente> ProdutosAdquiridos { get; set; }
 
         [Display(ResourceType = typeof(Language), Name = "NomeReduzido")]
         public string NomeReduzido { get; set; }
@@ -37,10 +44,9 @@ namespace br.com.Chronos.Entidade
         public int TipoCliente { get; set; }
         
         public bool ProdutoAcess { get; set; }
-        public bool ProdutoOfficecomexMax { get; set; }
+        public bool ProdutoOfficeComexMax { get; set; }
+        public bool ProdutoOfficeComex2010 { get; set; }
         public bool ProdutoOfficecomexInternacional { get; set; }
-        public bool ProdutoFollowebInternacional { get; set; }
-        public bool ProdutoFolloweb { get; set; }
         public bool Ativo { get; set; }
         public bool ClienteProspecto { get; set; }
     }
