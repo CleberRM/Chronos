@@ -10,7 +10,6 @@ namespace br.com.Chronos.AcessoDados
 {
     public class ADProduto : IAcoesBanco<Produto>
     {
-
         private OSContext _context;
         public ADProduto(OSContext contexto)
         {
@@ -19,7 +18,14 @@ namespace br.com.Chronos.AcessoDados
 
         public bool ExcluirEntidadePor(int id)
         {
-            throw new NotImplementedException();
+            var result = RetornarEntidadePor(id);
+            if (result != null)
+            {
+                _context.Produtos.Remove(result);
+                _context.SaveChanges();
+                return true;
+            }
+            return false;
         }
 
         public Produto RetornarEntidadePor(int id)
@@ -31,12 +37,22 @@ namespace br.com.Chronos.AcessoDados
 
         public IList<Produto> RetornarLista(Produto entidade)
         {
-            throw new NotImplementedException();
+            return _context.Produtos.Where(x => x.Descricao.Contains(entidade.Descricao)).ToList();
         }
 
         public int Salvar(Produto entidade)
         {
-            throw new NotImplementedException();
+            var result = RetornarEntidadePor(entidade.Id);
+            if (result != null)
+            {
+                _context.Entry(result).CurrentValues.SetValues(entidade);
+            }
+            else
+            {
+                _context.Produtos.Add(entidade);
+            }
+            _context.SaveChanges();
+            return entidade.Id;
         }
     }
 }
