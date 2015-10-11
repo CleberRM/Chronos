@@ -18,7 +18,14 @@ namespace br.com.Chronos.AcessoDados
 
         public bool ExcluirEntidadePor(int id)
         {
-            throw new NotImplementedException();
+            var result = RetornarEntidadePor(id);
+            if (result != null)
+            {
+                _context.ProdutosCliente.Remove(result);
+                _context.SaveChanges();
+                return true;
+            }
+            return false;
         }
 
         public ProdutoCliente RetornarEntidadePor(int id)
@@ -30,12 +37,22 @@ namespace br.com.Chronos.AcessoDados
 
         public IList<ProdutoCliente> RetornarLista(ProdutoCliente entidade)
         {
-            throw new NotImplementedException();
+            return _context.ProdutosCliente.Where(x => x.DescricaoProduto.Descricao.Contains(entidade.DescricaoProduto.Descricao)).ToList();
         }
 
         public int Salvar(ProdutoCliente entidade)
         {
-            throw new NotImplementedException();
+            var result = RetornarEntidadePor(entidade.Id);
+            if (result != null)
+            {
+                _context.Entry(result).CurrentValues.SetValues(entidade);
+            }
+            else
+            {
+                _context.ProdutosCliente.Add(entidade);
+            }
+            _context.SaveChanges();
+            return entidade.Id;
         }
     }
 }
