@@ -9,7 +9,6 @@ namespace br.com.Chronos.Entidade
     public class Produto : AEntidade
     {
         public string Descricao { get; set; }
-        public virtual Modalidade Modalidade { get; set; } 
-        public virtual ProdutoCliente ProdutoCliente { get; set; }
+        
     }
 }

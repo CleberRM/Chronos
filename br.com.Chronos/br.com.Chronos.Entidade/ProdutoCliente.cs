@@ -15,7 +15,9 @@ namespace br.com.Chronos.Entidade
             IdCliente = cliente.Id;
         }
 
-        public Produto Descricao { get; set; }
+        public int IdProduto { get; set; }
+        public Produto DescricaoProduto { get; set; }
+
         public int IdCliente { get; set; }
         public virtual Cliente Cliente { get; set; }
     }
