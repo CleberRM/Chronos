@@ -10,7 +10,7 @@ namespace br.com.Chronos.Negocio
     {
         public static bool Logar (string nomeUsuario, string senhaUsuario)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException(); //Here
         }
         public bool LembrarSenha (string emailUsuario)
         {
