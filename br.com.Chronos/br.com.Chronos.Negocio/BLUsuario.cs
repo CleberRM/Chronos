@@ -11,7 +11,7 @@ namespace br.com.Chronos.Negocio
     {
         public BLUsuario(IAcoesBanco<Usuario> acoesBanco) : base(acoesBanco)
         {
-                        
+           //Here             
         }
 
 
