@@ -25,7 +25,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">@Language.NomeProjeto</a>
+                @Html.ActionLink(@Language.NomeProjeto, "Index", "Home", null, new { @class = "navbar-brand" })
             </div>
         </div>
     </div>
@@ -34,7 +34,7 @@
                 <div class="nav-collapse sidebar-nav">
                     <ul class="nav nav-tabs nav-stacked main-menu">
                         <li class="active">
-                            @Html.ActionLink("Login", "Index", "Home", null, new { @class = "hidden-tablet" })
+                            @Html.ActionLink("Ordem de Serviço", "Index", "OrdemDeServico", null, new { @class = "hidden-tablet" })
                                 <i class="icon-bar-chart">
 
                                 </i>
