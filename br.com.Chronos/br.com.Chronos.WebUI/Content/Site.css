@@ -1,24 +1,25 @@
 ﻿body {
-    padding-top: 70px;
+    padding-top: 51px;
     padding-bottom: 10px;
     width: 100%;
 }
 
 #corpo {
-    width: 70%;
-    margin-left: 15%;
+    width: 80%;
+    margin-left: 13%;
     margin-right: 15%;
+    position: fixed;
 }
 
 #cabecalho {
     color: #FFFFFF;
     padding-left: 0%;
     padding-right: 100%;
-
+    
 }
 
 #wrapper {
-    padding-bottom: 50px; /* Height of the footer element */
+    padding-bottom: 10px; /* Height of the footer element */
     width: 80%;
 }
 
@@ -29,8 +30,8 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    padding-top: 50px;
-    top: 100%;
+    padding-top: 10px;
+    top: 93.5%;
     
 }
 
@@ -39,5 +40,5 @@
     margin-left: 0%;
     margin-right: 5%;
     position: absolute;
-    top: 100%;
+    top: 0%;
 }

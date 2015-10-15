@@ -18,7 +18,7 @@
 	#sidebar-left {
 		background: #1C2B36;
 		margin-left: 0px !important;
-		position: absolute;
+		position: fixed;
 		height: 100%;
 	}
 	
@@ -62,7 +62,7 @@
 	#sidebar-left {
 		background: #1C2B36;
 		margin-left: 0px !important;
-		position: absolute;
+		position: fixed;
 		height: 100%;
 	}
 	
