@@ -90,6 +90,15 @@ namespace br.com.Chronos.Idioma.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Eventos.
         /// </summary>
+        public static string Evento {
+            get {
+                return ResourceManager.GetString("Evento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eventos.
+        /// </summary>
         public static string Eventos {
             get {
                 return ResourceManager.GetString("Eventos", resourceCulture);
