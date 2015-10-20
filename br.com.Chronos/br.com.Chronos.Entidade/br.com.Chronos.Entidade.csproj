@@ -57,11 +57,13 @@
     <Compile Include="Escritorio.cs" />
     <Compile Include="Evento.cs" />
     <Compile Include="AEntidade.cs" />
-    <Compile Include="MensagemDados.cs" />
+    <Compile Include="Email.cs" />
     <Compile Include="Modalidade.cs" />
     <Compile Include="MotivoOS.cs" />
     <Compile Include="OrdemDeServico.cs" />
     <Compile Include="ParametroConfiguracaoMensagem.cs" />
+    <Compile Include="Produto.cs" />
+    <Compile Include="ProdutoCliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setor.cs" />
     <Compile Include="Usuario.cs" />

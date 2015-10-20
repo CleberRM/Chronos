@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.AcessoDados
 {
-    public class ADMensagemDados : IAcoesBanco<MensagemDados>
+    public class ADEmail : IAcoesBanco<Email>
     {
         private OSContext _contexto;
-        public ADMensagemDados(OSContext contexto)
+        public ADEmail(OSContext contexto)
         {
             _contexto = contexto;
         }
@@ -21,26 +21,26 @@ namespace br.com.Chronos.AcessoDados
             var result = RetornarEntidadePor(id);
             if (result != null)
             {
-                _contexto.MensagensDados.Remove(result);
+                _contexto.Emails.Remove(result);
                 _contexto.SaveChanges();
                 return true;
             }
             return false;
         }
 
-        public MensagemDados RetornarEntidadePor(int id)
+        public Email RetornarEntidadePor(int id)
         {
-            return (from c in _contexto.MensagensDados
+            return (from c in _contexto.Emails
                     where c.Id == id
                     select c).FirstOrDefault();
         }
 
-        public IList<MensagemDados> RetornarLista(MensagemDados entidade)
+        public IList<Email> RetornarLista(Email entidade)
         {
-            return _contexto.MensagensDados.Where(x => x.Assunto.Contains(entidade.Assunto)).ToList();
+            return _contexto.Emails.Where(x => x.Assunto.Contains(entidade.Assunto)).ToList();
         }
 
-        public int Salvar(MensagemDados entidade)
+        public int Salvar(Email entidade)
         {
                 var result = RetornarEntidadePor(entidade.Id);
                 if (result != null)
@@ -49,7 +49,7 @@ namespace br.com.Chronos.AcessoDados
                 }
                 else
                 {
-                    _contexto.MensagensDados.Add(entidade);
+                    _contexto.Emails.Add(entidade);
                 }
                 _contexto.SaveChanges();
                 return entidade.Id;

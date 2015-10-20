@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.Entidade
 {
-    public class FollowUpOSCliente : AEntidade
+    public class Produto : AEntidade
     {
         public string Descricao { get; set; }
-        public int IdOrdemServico { get; set; }
-        public virtual OrdemDeServico OrdemServico { get; set; }
+        
     }
-
 }

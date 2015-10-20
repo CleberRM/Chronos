@@ -58,6 +58,8 @@
     <Compile Include="BLFollowUpOSCliente.cs" />
     <Compile Include="BLModalidade.cs" />
     <Compile Include="BLOrdemDeServico.cs" />
+    <Compile Include="BLProduto.cs" />
+    <Compile Include="BLProdutoCliente.cs" />
     <Compile Include="BLSetor.cs" />
     <Compile Include="BLUsuario.cs" />
     <Compile Include="EnviadorEMail.cs" />

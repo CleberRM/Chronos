@@ -7,14 +7,11 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.Negocio
 {
-    public class BLUsuario : ANegocio<Usuario> 
+    public class BLProduto : ANegocio<Produto>
     {
-        public BLUsuario(IAcoesBanco<Usuario> acoesBanco) : base(acoesBanco)
+        public BLProduto(IAcoesBanco<Produto> acoesBanco) : base(acoesBanco)
         {
-           //Here             
+
         }
-
-
-
     }
 }

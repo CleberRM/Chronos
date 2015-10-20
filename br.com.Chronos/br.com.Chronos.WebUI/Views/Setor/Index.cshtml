@@ -6,19 +6,23 @@
     @Html.AntiForgeryToken()
 
     //<div class="form-horizontal">
-        <center><h2>@Language.Setor</h2></center>
-        <hr />
+        
+        
 
                 <div class="panel panel-info">
                     <div class="panel-heading">
-                        <input type="submit" value="Create" class="btn btn-lg btn-primary" />
-                        <input type="submit" value="Edit" class="btn btn-lg btn-info" />
-                        <input type="submit" value="Save" class="btn btn-lg btn-success" />
-                        <input type="submit" value="Delete" class="btn btn-lg btn-danger" />
+                        <center><h2>@Language.Setor</h2></center>
+
                         
                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                     </div>
                     <div class="panel-body">
+                        <div class="col-md-12 form-group">
+                            <input type="submit" value="Create" class="btn btn-lg btn-primary" />
+                            <input type="submit" value="Edit" class="btn btn-lg btn-info" />
+                            <input type="submit" value="Save" class="btn btn-lg btn-success" />
+                            <input type="submit" value="Delete" class="btn btn-lg btn-danger" />
+                        </div>
                         <div class="col-md-12 form-group">
                             @Html.LabelFor(model => model.Id, htmlAttributes: new { @class = "control-label col-md-1" })
                             <div class="col-md-2">

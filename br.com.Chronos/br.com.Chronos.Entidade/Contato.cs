@@ -11,7 +11,7 @@ namespace br.com.Chronos.Entidade
 
         public Contato(Cliente cliente)
         {
-            this.Clientes = cliente;
+            this.Cliente = cliente;
             this.IdCliente = cliente.Id;
 
         }
@@ -28,6 +28,6 @@ namespace br.com.Chronos.Entidade
         public string ResponsavelRegistroContato { get; set; }
         public bool TreinamentoContato { get; set; }
         public int IdCliente { get; set; }
-        public virtual Cliente Clientes { get; set; }
+        public virtual Cliente Cliente { get; set; }
     }
 }

@@ -1,22 +1,21 @@
-﻿@model br.com.Chronos.Entidade.Eventos
+﻿@model br.com.Chronos.Entidade.Evento
+@using br.com.Chronos.Idioma.Resources
+
 
 
 
 <div class="panel panel-info">
-    @*//Botoes*@
-    
-    <div class="panel-heading" style="text-align:right" >
-        <div style="float:left; width:50px; height:100%;vertical-align:middle">
-            <label>Eventos</label>
-        </div>
+    <div class="panel-heading">
+        <center><h2>@Language.Evento</h2></center>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    </div>
+    <div class="panel-body">
+        <div class="col-md-12 form-group">
             <input type="submit" value="Create" class="btn btn-lg btn-primary" />
             <input type="submit" value="Edit" class="btn btn-lg btn-info" />
             <input type="submit" value="Save" class="btn btn-lg btn-success" />
             <input type="submit" value="Delete" class="btn btn-lg btn-danger" />
-        
-    </div>
-    
-    <div class="panel-body">
+        </div>
         <div class="col-md-12 form-group">
             <div class="form-group">
                 @Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -32,12 +31,48 @@
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.CorHexadecimal, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.CorHexadecimal, "", new { @class = "text-danger" })
+
+
+                    <div id="customWidget">
+                        <div id="colorSelector2">
+                            <div style="background-color: rgb(31, 87, 31);">
+                            </div>
+                        </div>
+                        <div id="colorpickerHolder2" style="height: 0px; display: block;">
+                            <div class="colorpicker" id="collorpicker_446" style="display: block; position: absolute;">
+                                <div class="colorpicker_color" style="background-color: rgb(0, 0, 255);">
+                                    <div>
+                                        <div style="left: 73px; top: 18px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="colorpicker_hue">
+                                    <div style="top: 50px;">
+                                    </div>
+                                </div>
+                                <div class="colorpicker_new_color" style="background-color: rgb(114, 114, 224);"></div>
+                                <div class="colorpicker_current_color" style="background-color: rgb(31, 87, 31);"></div>
+                                <div class="colorpicker_hex">
+                                    <input type="text" maxlength="6" size="6">
+                                </div>
+                                <div class="colorpicker_rgb_r colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div>
+                                <div class="colorpicker_rgb_g colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div>
+                                <div class="colorpicker_rgb_b colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div>
+                                <div class="colorpicker_hsb_h colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div>
+                                <div class="colorpicker_hsb_s colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div>
+                                <div class="colorpicker_hsb_b colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div>
+                                <div class="colorpicker_submit">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-            </div>
-</div><!--/span-->
+    </div>
+</div>
+
 
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 <script src="~/Scripts/jquery.validate.min.js"></script>

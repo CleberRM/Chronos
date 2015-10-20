@@ -56,10 +56,12 @@
     <Compile Include="ADEvento.cs" />
     <Compile Include="ADFollowUpOSCliente.cs" />
     <Compile Include="ADLancamentoEvento.cs" />
-    <Compile Include="ADMensagemDados.cs" />
+    <Compile Include="ADEmail.cs" />
     <Compile Include="ADModalidade.cs" />
     <Compile Include="ADMotivoOS.cs" />
     <Compile Include="ADOrdemDeServico.cs" />
+    <Compile Include="ADProduto.cs" />
+    <Compile Include="ADProdutoCliente.cs" />
     <Compile Include="ADSetor.cs" />
     <Compile Include="ADUsuario.cs" />
     <Compile Include="Migrations\201509302205230_CriarBanco.cs" />

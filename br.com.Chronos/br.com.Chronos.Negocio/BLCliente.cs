@@ -10,7 +10,7 @@ namespace br.com.Chronos.Negocio
         {
             public BLCliente(IAcoesBanco<Cliente> acoesBanco) : base(acoesBanco)
             {
-
+                //Here
             }
         }
 }
