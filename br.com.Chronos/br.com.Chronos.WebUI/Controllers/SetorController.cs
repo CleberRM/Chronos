@@ -16,6 +16,12 @@ namespace br.com.Chronos.WebUI.Controllers
             this._blSetor = blSetor;
         }
 
+        public void Salvar(Setor setor)
+        {
+            _blSetor.Salvar(setor);
+        }
+
+
         // GET: Setor
         public ActionResult Index()
         {
