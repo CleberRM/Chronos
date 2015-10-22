@@ -15,7 +15,9 @@ namespace br.com.Chronos.Entidade
 
        
         public Evento EventoLancado { get; private set; }
+        public Usuario ResponsavelCriacaoEvento { get; set; } 
         public Usuario ResponsavelEvento { get; set; }
+        public DateTime DataCriacaoEvento { get; set; }
         public DateTime DataPrevistaConclusao { get; set; }
         public DateTime DataConclusao { get; set; }
         public string StatusEvento { get; set; }
