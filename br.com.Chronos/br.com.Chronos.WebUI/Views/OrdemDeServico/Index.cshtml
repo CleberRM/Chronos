@@ -30,6 +30,8 @@
 </div>
 <div class="tab-content">
     <div id="DadosPrincipais" class="tab-pane fade in active">
+        
+       
         <div class="form-group">
             @Html.LabelFor(model => model.DataCriacao, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -46,16 +48,22 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.NivelDaOS, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.NivelDaOS, new { htmlAttributes = new { @class = "form-control" } })
+        <div class="col-md-12 form-group">
+            @Html.LabelFor(model => model.NivelDaOS,  htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-1" >
+                @Html.DropDownListFor(model => model.NivelDaOS,new SelectList(
+               new List<Object> {
+                   new {value =1,text="Nivel 1"},
+                   new {value =2,text="Nivel 2"},
+                   new {value =3,text="Nivel 3"},
+                   new {value =4,text="Nivel 4"},
+                   new {value =5,text="Nivel 5"} },"value","text",1), htmlAttributes: new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.NivelDaOS, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        
         <div class="form-group">
-            @Html.LabelFor(model => model.NomeDocumento, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.NomeDocumento,  new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.NomeDocumento, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.NomeDocumento, "", new { @class = "text-danger" })
