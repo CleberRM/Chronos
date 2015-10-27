@@ -72,6 +72,10 @@
     <Compile Include="Migrations\201510271620148_AtualizarEscritorio.Designer.cs">
       <DependentUpon>201510271620148_AtualizarEscritorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201510271852059_AtualizarEscritorio1.cs" />
+    <Compile Include="Migrations\201510271852059_AtualizarEscritorio1.Designer.cs">
+      <DependentUpon>201510271852059_AtualizarEscritorio1.cs</DependentUpon>
+    </Compile>
     <Compile Include="OSContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201510271620148_AtualizarEscritorio.resx">
       <DependentUpon>201510271620148_AtualizarEscritorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510271852059_AtualizarEscritorio1.resx">
+      <DependentUpon>201510271852059_AtualizarEscritorio1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

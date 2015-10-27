@@ -205,7 +205,7 @@ namespace br.com.Chronos.AcessoDados
 
             modelBuilder.Entity<Usuario>().ToTable("Usuarios")
                 .HasKey(x => x.Id)
-                .HasRequired(x => x.ResponsavelCriacao)
+                .HasOptional(x => x.ResponsavelCriacao)
                 .WithMany()
                 .HasForeignKey(x => x.IdResponsavelCriacao)
                 .WillCascadeOnDelete(false);
