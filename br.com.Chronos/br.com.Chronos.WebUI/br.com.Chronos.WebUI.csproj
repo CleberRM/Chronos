@@ -181,7 +181,7 @@
     <Content Include="Views\Cliente\Index.cshtml" />
     <Content Include="Views\Eventos\Index.cshtml" />
     <Content Include="Views\OrdemDeServico\Index.cshtml" />
-    <Content Include="Views\Escritorio\View.cshtml" />
+    <Content Include="Views\Escritorio\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
