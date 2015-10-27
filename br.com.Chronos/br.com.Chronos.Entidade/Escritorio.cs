@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.Entidade
 {
-    public class Escritorio
+    public class Escritorio : AEntidade
     {
-        public int Id { get; set; }
         public int Cnpj { get; set; }
         public int InscricaoEstadual { get; set; }
         public int InscricaoMunicipal { get; set; }
