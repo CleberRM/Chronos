@@ -14,7 +14,7 @@ namespace br.com.Chronos.DependencyInjection
             container.Register<IAcoesBanco<ProdutoCliente>, ADProdutoCliente>();
             container.Register<IAcoesBanco<DocumentosAnexos>, ADDocumentosAnexos>();
             container.Register<IAcoesBanco<Evento>, ADEvento>();
-            //container.Register<IAcoesBanco<Escritorio>, ADEscritorio>();
+            container.Register<IAcoesBanco<Escritorio>, ADEscritorio>();
             container.Register<IAcoesBanco<FollowUpOSCliente>, ADFollowUpOSCliente>();
             container.Register<IAcoesBanco<LancamentoEvento>, ADLancamentoEvento>();
             container.Register<IAcoesBanco<Email>, ADEmail>();
