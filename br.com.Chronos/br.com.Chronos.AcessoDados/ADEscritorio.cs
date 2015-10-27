@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.AcessoDados
 {
-    public class ADEscritorio
+    public class ADEscritorio : IAcoesBanco<Escritorio>
     {
         private OSContext _contexto;
         public ADEscritorio(OSContext contexto)

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace br.com.Chronos.Negocio
 {
-    //public class BLEscritorio : ANegocio<Escritorio>
-    //{
-    //    public BLEscritorio(IAcoesBanco<Escritorio>acoesbanco) : base(acoesbanco)
-    //    {
+    public class BLEscritorio : ANegocio<Escritorio>
+    {
+        public BLEscritorio(IAcoesBanco<Escritorio>acoesbanco) : base(acoesbanco)
+        {
 
-    //    }
-    //}
+        }
+    }
 }

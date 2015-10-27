@@ -22,5 +22,6 @@ namespace br.com.Chronos.Entidade
         public int Telefone { get; set; }
         public int Fax { get; set; }
         public string Site { get; set; }
+        
     }
 }

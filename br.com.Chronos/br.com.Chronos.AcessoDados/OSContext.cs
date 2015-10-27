@@ -86,7 +86,10 @@ namespace br.com.Chronos.AcessoDados
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Escritorio>().ToTable("Escritorios")
-                .HasKey(x => x.Id);
+                .HasKey(x => x.Id)
+                .HasOptional(x => x.ResponsavelCriacao)
+                .WithMany()
+                .HasForeignKey(x => x.IdResponsavelCriacao);
 
             modelBuilder.Entity<Evento>().ToTable("Eventos")
                 .HasKey(x => x.Id)
@@ -206,6 +209,8 @@ namespace br.com.Chronos.AcessoDados
                 .WithMany()
                 .HasForeignKey(x => x.IdResponsavelCriacao)
                 .WillCascadeOnDelete(false);
+
+            
         }
     }
 }
