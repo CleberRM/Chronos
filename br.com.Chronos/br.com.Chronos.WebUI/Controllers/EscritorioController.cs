@@ -12,7 +12,11 @@ namespace br.com.Chronos.WebUI.Controllers
         {
             _blEscritorio = blEscritorio;
         }
-
+        
+        public void Salvar(Escritorio escritorio)
+        {
+            _blEscritorio.Salvar(escritorio);
+        }
 
         // GET: Escritorio
         public ActionResult Index()
