@@ -29,7 +29,7 @@ namespace br.com.Chronos.DependencyInjection
             container.Register<ANegocio<Contato>, BLContato>();
             container.Register<ANegocio<DocumentosAnexos>,BLDocumentosAnexos>();
             container.Register<ANegocio<Evento>, BLEventos>();
-            //container.Register<ANegocio<Escritorio>, BLEscritorio>();
+            container.Register<ANegocio<Escritorio>, BLEscritorio>();
             container.Register<ANegocio<FollowUpOSCliente>, BLFollowUpOSCliente>();
             container.Register<ANegocio<Modalidade>, BLModalidade>();
             container.Register<ANegocio<OrdemDeServico>, BLOrdemDeServico>();
