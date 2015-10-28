@@ -124,7 +124,6 @@
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery-migrate-1.0.0.min.js" />
     <Content Include="Scripts\jquery.js" />
-    <Content Include="Scripts\layout.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
