@@ -14,7 +14,7 @@ namespace br.com.Chronos.WebUI.Controllers
         public ClienteController(ANegocio<Cliente> blCliente)
         {
             this._blCliente = blCliente;
-        } 
+        }
 
         // GET: Cliente
         public ActionResult Index()
