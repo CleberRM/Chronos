@@ -1,4 +1,16 @@
-﻿body {
+﻿
+
+
+html, body {
+	background-color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	color: #52697E;
+}
+
+
+body {
     padding-top: 51px;
     padding-bottom: 10px;
     width: 100%;
