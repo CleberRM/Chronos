@@ -1,7 +1,10 @@
 ﻿@model br.com.Chronos.Entidade.Evento
 @using br.com.Chronos.Idioma.Resources
 
-
+@section style
+ {
+    <link href="~/Content/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet"/>
+ }
 
 
 <div class="panel panel-info">
@@ -44,37 +47,19 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Styled</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
                             <div class="input-group demo2">
-                                <input type="text" value="#e01ab5" class="form-control" />
-                                <span class="input-group-addon"><i></i></span>
+                                <input type="text" value="#000000" class="form-control" />
+                                <span class="input-group-addon"><i style="background-color: rgb(0, 0, 0);"></i></span>
                             </div>
                         </div>
                     </div>
 
                 </form>
             </div>
-            <!-- color picker -->
-            <script src="~/Scripts/colorpicker/bootstrap-colorpicker.js"></script>
-            <script src="~/Scripts/colorpicker/docs.js"></script>
-            <div class="colorpicker dropdown-menu colorpicker-hidden" style="top: 42px; left: 384px;">
-                <div class="colorpicker-saturation" style="background-color: rgb(255, 0, 0);">
-                    <i style="top: 0px; left: 100px;"><b></b></i>
-                </div>
-                <div class="colorpicker-hue"><i style="top: 0px; left: 0px;"></i>
-                </div>
-                <div class="colorpicker-alpha" style="background-color: rgb(255, 0, 0);">
-                    <i style="top: 0px;"></i>
-                </div>
-                <div class="colorpicker-color" style="background-color: rgb(255, 0, 0);">
-                    <div style="background-color: rgb(255, 0, 0);">
-                    </div>
-                </div>
-
-            </div>
         </div>
     </div>
 </div>
-
-
-<script src="~/Scripts/jquery-1.10.2.min.js"></script>
-<script src="~/Scripts/jquery.validate.min.js"></script>
-<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+@section Scripts{
+<!-- color picker -->
+<script src="~/Scripts/colorpicker/bootstrap-colorpicker.js"></script>
+<script src="~/Scripts/colorpicker/docs.js"></script>
+}
