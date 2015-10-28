@@ -108,6 +108,12 @@
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Images\colorpicker\alpha-horizontal.png" />
+    <Content Include="Images\colorpicker\alpha.png" />
+    <Content Include="Content\colorpicker\bootstrap-colorpicker.min.css" />
+    <Content Include="Images\colorpicker\hue-horizontal.png" />
+    <Content Include="Images\colorpicker\hue.png" />
+    <Content Include="Images\colorpicker\saturation.png" />
     <Content Include="Content\halflings.css" />
     <Content Include="Content\pages\homeIndex.css" />
     <Content Include="Content\sb-admin.css" />
@@ -120,6 +126,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\colorpicker\bootstrap-colorpicker.js" />
+    <Content Include="Scripts\colorpicker\docs.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery-migrate-1.0.0.min.js" />
     <Content Include="Scripts\jquery.js" />
@@ -159,7 +167,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
