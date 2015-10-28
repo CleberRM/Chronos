@@ -108,9 +108,7 @@
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\colorpicker.css" />
     <Content Include="Content\halflings.css" />
-    <Content Include="Content\layout.css" />
     <Content Include="Content\pages\homeIndex.css" />
     <Content Include="Content\sb-admin.css" />
     <Content Include="Content\Site.css" />
@@ -148,13 +146,9 @@
     <Content Include="Images\select2.png" />
     <Content Include="Images\slider.png" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\colorpicker.js" />
-    <Content Include="Scripts\eye.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery-migrate-1.0.0.min.js" />
     <Content Include="Scripts\jquery.js" />
-    <Content Include="Scripts\layout.js" />
-    <Content Include="Scripts\utils.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
