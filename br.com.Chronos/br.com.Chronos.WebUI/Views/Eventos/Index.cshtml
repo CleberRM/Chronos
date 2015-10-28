@@ -1,7 +1,10 @@
 ﻿@model br.com.Chronos.Entidade.Evento
 @using br.com.Chronos.Idioma.Resources
 
-
+@section style
+ {
+    <link href="~/Content/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet"/>
+ }
 
 
 <div class="panel panel-info">
@@ -31,17 +34,32 @@
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.CorHexadecimal, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.CorHexadecimal, "", new { @class = "text-danger" })
-
-
-
                 </div>
             </div>
         </div>
+        <!-- form input mask -->
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <div class="x_content">
+                <br />
+                <form class="form-horizontal form-label-left">
 
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Styled</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <div class="input-group demo2">
+                                <input type="text" value="#000000" class="form-control" />
+                                <span class="input-group-addon"><i style="background-color: rgb(0, 0, 0);"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
     </div>
 </div>
-
-
-<script src="~/Scripts/jquery-1.10.2.min.js"></script>
-<script src="~/Scripts/jquery.validate.min.js"></script>
-<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+@section Scripts{
+<!-- color picker -->
+<script src="~/Scripts/colorpicker/bootstrap-colorpicker.js"></script>
+<script src="~/Scripts/colorpicker/docs.js"></script>
+}
