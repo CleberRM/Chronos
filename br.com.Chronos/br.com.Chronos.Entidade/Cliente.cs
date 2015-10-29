@@ -51,5 +51,6 @@ namespace br.com.Chronos.Entidade
         public bool ProdutoOfficecomexInternacional { get; set; }
         public bool Ativo { get; set; }
         public bool ClienteProspecto { get; set; }
+        public string ResponsavelCriacao { get; set; }
     }
 }

@@ -16,7 +16,7 @@ namespace br.com.Chronos.AcessoDados.Migrations
                         NomeCompleto = c.String(),
                         CNPJeCPF = c.String(),
                         Endereco = c.String(),
-                        Numero = c.Int(nullable: false), 
+                        Numero = c.Int(nullable: false),
                         Complemento = c.String(),
                         Bairro = c.String(),
                         CEP = c.String(),
@@ -37,6 +37,7 @@ namespace br.com.Chronos.AcessoDados.Migrations
                         ProdutoOfficecomexInternacional = c.Boolean(nullable: false),
                         Ativo = c.Boolean(nullable: false),
                         ClienteProspecto = c.Boolean(nullable: false),
+                        ResponsavelCriacao = c.String(),
                         DataCriacao = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.IdCliente);
@@ -58,6 +59,7 @@ namespace br.com.Chronos.AcessoDados.Migrations
                         ResponsavelRegistroContato = c.String(),
                         TreinamentoContato = c.Boolean(nullable: false),
                         IdCliente = c.Int(nullable: false),
+                        ResponsavelCriacao = c.String(),
                         DataCriacao = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.IdContato)
@@ -71,6 +73,7 @@ namespace br.com.Chronos.AcessoDados.Migrations
                         IdProdutoCliente = c.Int(nullable: false, identity: true),
                         IdProduto = c.Int(nullable: false),
                         IdCliente = c.Int(nullable: false),
+                        ResponsavelCriacao = c.String(),
                         DataCriacao = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.IdProdutoCliente)
@@ -85,6 +88,7 @@ namespace br.com.Chronos.AcessoDados.Migrations
                     {
                         IdProduto = c.Int(nullable: false, identity: true),
                         Descricao = c.String(),
+                        ResponsavelCriacao = c.String(),
                         DataCriacao = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.IdProduto);
@@ -97,6 +101,7 @@ namespace br.com.Chronos.AcessoDados.Migrations
                         NomeDocumento = c.String(),
                         CaminhoDocumento = c.String(),
                         IdOrdemServico = c.Int(nullable: false),
+                        ResponsavelCriacao = c.String(),
                         DataCriacao = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.IdDocAnexos)
@@ -141,6 +146,7 @@ namespace br.com.Chronos.AcessoDados.Migrations
                         TextoMensagem = c.String(),
                         Mensagem = c.Int(nullable: false),
                         IdOrdemServico = c.Int(nullable: false),
+                        ResponsavelCriacao = c.String(),
                         DataCriacao = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.IdEmail)
@@ -160,6 +166,7 @@ namespace br.com.Chronos.AcessoDados.Migrations
                         DataConclusao = c.DateTime(nullable: false),
                         StatusEvento = c.String(),
                         IdOrdemServico = c.Int(nullable: false),
+                        ResponsavelCriacao = c.String(),
                         DataCriacao = c.DateTime(nullable: false),
                         EventoLancado_IdEvento = c.Int(),
                         ResponsavelCriacaoEvento_IdUsuario = c.Int(),
@@ -181,6 +188,7 @@ namespace br.com.Chronos.AcessoDados.Migrations
                         IdEvento = c.Int(nullable: false, identity: true),
                         Descricao = c.String(),
                         CorHexadecimal = c.String(),
+                        ResponsavelCriacao = c.String(),
                         DataCriacao = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.IdEvento);
@@ -210,6 +218,7 @@ namespace br.com.Chronos.AcessoDados.Migrations
                         SenhaSmtp = c.String(),
                         TextoAssinaturaSmtp = c.String(),
                         AutenticacaoTSL = c.Boolean(nullable: false),
+                        ResponsavelCriacao = c.String(),
                         DataCriacao = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.IdUsuario)
@@ -248,6 +257,7 @@ namespace br.com.Chronos.AcessoDados.Migrations
                     {
                         IdSetor = c.Int(nullable: false, identity: true),
                         Descricao = c.String(),
+                        ResponsavelCriacao = c.String(),
                         DataCriacao = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.IdSetor);
@@ -259,6 +269,7 @@ namespace br.com.Chronos.AcessoDados.Migrations
                         IdFollow = c.Int(nullable: false, identity: true),
                         Descricao = c.String(),
                         IdOrdemServico = c.Int(nullable: false),
+                        ResponsavelCriacao = c.String(),
                         DataCriacao = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.IdFollow)
@@ -272,6 +283,7 @@ namespace br.com.Chronos.AcessoDados.Migrations
                         IdModalidade = c.Int(nullable: false, identity: true),
                         IdProduto = c.Int(nullable: false),
                         IdOrdemServico = c.Int(nullable: false),
+                        ResponsavelCriacao = c.String(),
                         DataCriacao = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.IdModalidade)
@@ -287,6 +299,7 @@ namespace br.com.Chronos.AcessoDados.Migrations
                         IdMotivo = c.Int(nullable: false, identity: true),
                         Descricao = c.String(),
                         IdOrdemServico = c.Int(nullable: false),
+                        ResponsavelCriacao = c.String(),
                         DataCriacao = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.IdMotivo)

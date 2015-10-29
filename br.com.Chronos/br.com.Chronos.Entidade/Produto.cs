@@ -10,6 +10,6 @@ namespace br.com.Chronos.Entidade
     {
         public int IdProduto { get; set; }
         public string Descricao { get; set; }
-        
+        public string ResponsavelCriacao { get; set; }
     }
 }

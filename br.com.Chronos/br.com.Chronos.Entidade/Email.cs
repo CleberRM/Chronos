@@ -20,6 +20,7 @@ namespace br.com.Chronos.Entidade
         public TipoMensagem Mensagem { get; set; }
 
         public int IdOrdemServico { get; set; }
-        public OrdemDeServico OrdemServico { get; set; }
+        public virtual OrdemDeServico OrdemServico { get; set; }
+        public string ResponsavelCriacao { get; set; }
     }
 }

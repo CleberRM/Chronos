@@ -12,5 +12,6 @@ namespace br.com.Chronos.Entidade
         public int IdEvento {get; set;}
         public string Descricao { get; set; }
         public string CorHexadecimal { get; set; }
+        public string ResponsavelCriacao { get; set; }
     }
 }

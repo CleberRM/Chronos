@@ -12,6 +12,7 @@ namespace br.com.Chronos.Entidade
         public string Descricao { get; set; }
         public int IdOrdemServico { get; set; }
         public virtual OrdemDeServico OrdemServico { get; set; }
+        public string ResponsavelCriacao { get; set; }
     }
 
 }

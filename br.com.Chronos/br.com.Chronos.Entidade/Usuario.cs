@@ -27,10 +27,10 @@ namespace br.com.Chronos.Entidade
         public string AssinaturaTexto { get; set; }
 
         public int IdEscritorio { get; set; }
-        public Escritorio EscritorioUsuario { get; set; }
+        public virtual Escritorio EscritorioUsuario { get; set; }
 
         public int IdSetor { get; set; }
-        public Setor SetorUsuario { get; set; }
+        public virtual Setor SetorUsuario { get; set; }
         
         //Configuração do Usuário
         public bool Administrador { get; set; }
@@ -47,5 +47,6 @@ namespace br.com.Chronos.Entidade
         public string SenhaSmtp { get; set; }
         public string TextoAssinaturaSmtp { get; set; }
         public bool AutenticacaoTSL { get; set; }
+        public string ResponsavelCriacao { get; set; }
     }
 }

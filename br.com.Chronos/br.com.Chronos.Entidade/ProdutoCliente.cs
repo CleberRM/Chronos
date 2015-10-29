@@ -22,5 +22,7 @@ namespace br.com.Chronos.Entidade
 
         public int IdCliente { get; set; }
         public virtual Cliente Cliente { get; set; }
+
+        public string ResponsavelCriacao { get; set; }
     }
 }
