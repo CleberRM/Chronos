@@ -6,41 +6,9 @@
  * Licensed under the Apache License v2.0
  * http://www.apache.org/licenses/LICENSE-2.0.txt
  *
- */.colorpicker-saturation
-   {
-       float:left;
-       width:100px;
-       height:100px;
-       cursor:crosshair;
-       background-image:url("~/Images/colorpicker/saturation.png")
-
-   }
-   .colorpicker-saturation i
-   {
-       position:absolute;
-       top:0;
-       left:0;
-       display:block;
-       width:5px;
-       height:5px;
-       margin:-4px 0 0 -4px;
-       border:1px solid #000;
-       -webkit-border-radius:5px;
-       -moz-border-radius:5px;
-       border-radius:5px
-
-   }
-   .colorpicker-saturation i b
-   {
-       display:block;
-       width:5px;
-       height:5px;
-       border:1px solid #fff;
-       -webkit-border-radius:5px;
-       -moz-border-radius:5px;
-       border-radius:5px
-
-   }
+ */.colorpicker-saturation   {float:left;width:100px;height:100px;cursor:crosshair;background-image:url("../../Images/colorpicker/saturation.png")}
+   .colorpicker-saturation i{position:absolute;top:0;left:0;display:block;width:5px;height:5px;margin:-4px 0 0 -4px;border:1px solid #000;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px}
+   .colorpicker-saturation i b{display:block;width:5px;height:5px;border:1px solid #fff;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px}
    .colorpicker-hue,
    .colorpicker-alpha
    {
@@ -54,8 +22,8 @@
    }
    .colorpicker-hue i,.colorpicker-alpha i
    {
-       position:absolute
-           ;top:0;
+       position:absolute;
+       top:0;
        left:0;
        display:block;
        width:100%;
@@ -67,11 +35,11 @@
    }
    .colorpicker-hue
    {
-       background-image:url("~/Images/colorpicker/hue.png")}
+       background-image:url("../../Images/colorpicker/hue.png")}
    .colorpicker-alpha
    {
        display:none;
-       background-image:url("~/Images/colorpicker/alpha.png")
+       background-image:url("../../Images/colorpicker/alpha.png")
 
    }
    .colorpicker
@@ -133,7 +101,7 @@
        height:10px;
        margin-top:5px;
        clear:both;
-       background-image:url("~/Images/colorpicker/alpha.png");
+       background-image:url("../../Images/colorpicker/alpha.png");
        background-position:0 100%
 
    }
@@ -202,12 +170,12 @@
    }
    .colorpicker.colorpicker-horizontal .colorpicker-hue
    {
-       background-image:url("~/Images/colorpicker/hue-horizontal.png")
+       background-image:url("../../Images/colorpicker/hue-horizontal.png")
 
    }
    .colorpicker.colorpicker-horizontal .colorpicker-alpha
    {
-       background-image:url("~/Images/colorpicker/alpha-horizontal.png")
+       background-image:url("../../Images/colorpicker/alpha-horizontal.png")
 
    }
    .colorpicker.colorpicker-hidden
