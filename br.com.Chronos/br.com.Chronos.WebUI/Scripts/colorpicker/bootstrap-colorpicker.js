@@ -759,6 +759,8 @@
                 val = val || this.color.toString(this.format);
                 if (this.input !== false) {
                     this.input.prop('value', val);
+                    $(this.input).css('background-color', val);
+                    $(this.input).css('color', val);
                 }
                 return val;
             },
