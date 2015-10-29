@@ -128,6 +128,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\colorpicker\bootstrap-colorpicker.js" />
     <Content Include="Scripts\colorpicker\docs.js" />
+    <Content Include="Scripts\colorpicker\eventos.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery-migrate-1.0.0.min.js" />
     <Content Include="Scripts\jquery.js" />
