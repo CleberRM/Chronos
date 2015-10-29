@@ -5,21 +5,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@Language.NomeProjeto</title>
-    
+
     <link id="bootstrap-style" href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/sb-admin.css" rel="stylesheet">
     <link href="~/Content/bootstrap-responsive.min.css" rel="stylesheet">
     <link href="~/Content/sb-admin.css" rel="stylesheet">
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
 
-    
-    
+
+
 
     @RenderSection("style", false)
 </head>
 <body>
-    <div id="wrapper">
 
+    <div id="wrapper">
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -123,7 +122,7 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                       <a href="@Url.Action("Index","OrdemDeServico")" class="hidden-tablet"><i class="glyphicon glyphicon-plus"></i> Ordem de Serviço</a>
+                        <a href="@Url.Action("Index","OrdemDeServico")" class="hidden-tablet"><i class="glyphicon glyphicon-plus"></i> Ordem de Serviço</a>
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="glyphicon glyphicon-pencil"></i> Cadastros</a>
@@ -142,24 +141,31 @@
                             </li>
                         </ul>
                     </li>
-                    
+
                 </ul>
             </div>
+        </nav>
 
 
-            <div id="corpo">
+        <div id="page-wrapper">
+            <div class="container-fluid">
                 @RenderBody()
             </div>
+
+
             <div id="rodape">
                 <footer>
                     <p>&copy; @DateTime.Now.Year - @Language.NomeProjeto</p>
                 </footer>
             </div>
-        </nav>
-        <script src="~/Scripts/jquery-2.1.4.min.js"></script>
-        <script src="~/Scripts/bootstrap.min.js"></script>
-        @RenderSection("Scripts", false)
+        </div>
+    </div>
 
+
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    @RenderSection("Scripts", false)
 
 </body>
+
 </html>
