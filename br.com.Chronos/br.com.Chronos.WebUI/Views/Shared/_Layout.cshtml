@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@Language.NomeProjeto</title>
     
-   
     <link id="bootstrap-style" href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/sb-admin.css" rel="stylesheet">
     <link href="~/Content/bootstrap-responsive.min.css" rel="stylesheet">
     <link href="~/Content/sb-admin.css" rel="stylesheet">
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    
-    
 
+    
+    
 
     @RenderSection("style", false)
 </head>
@@ -129,7 +129,7 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="glyphicon glyphicon-pencil"></i> Cadastros</a>
                         <ul id="demo" class="collapse">
                             <li>
-                                @Html.ActionLink("Escritorio", "Index", "Cliente", null, new { @class = "submenu" })
+                                @Html.ActionLink("Escritorio", "Index", "Escritorio", null, new { @class = "submenu" })
                             </li>
                             <li>
                                 @Html.ActionLink(Language.Cliente, "Index", "Cliente", null, new { @class = "submenu" })
