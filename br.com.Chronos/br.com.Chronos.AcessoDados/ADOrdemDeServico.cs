@@ -31,7 +31,7 @@ namespace br.com.Chronos.AcessoDados
         public OrdemDeServico RetornarEntidadePor(int id)
         {
             return (from c in _contexto.OrdemDeServicos
-                    where c.Id == id
+                    where c.IdOrdemServico == id
                     select c).FirstOrDefault();
         }
 
@@ -42,7 +42,7 @@ namespace br.com.Chronos.AcessoDados
 
         public int Salvar(OrdemDeServico entidade)
         {
-            var result = RetornarEntidadePor(entidade.Id);
+            var result = RetornarEntidadePor(entidade.IdOrdemServico);
             if (result != null)
             {
                 _contexto.Entry(result).CurrentValues.SetValues(entidade);
@@ -52,7 +52,7 @@ namespace br.com.Chronos.AcessoDados
                 _contexto.OrdemDeServicos.Add(entidade);
             }
             _contexto.SaveChanges();
-            return entidade.Id;
+            return entidade.IdOrdemServico;
         }
     }
 }

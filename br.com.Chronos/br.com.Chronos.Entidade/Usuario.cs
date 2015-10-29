@@ -18,6 +18,7 @@ namespace br.com.Chronos.Entidade
         }
 
         // Dados Usuário
+        public int IdUsuario { get; set; }
         public string UserName { get; set; }
         public string SenhaUsuario { get; set; }
         public string NomeUsuario { get; set; }
@@ -25,8 +26,11 @@ namespace br.com.Chronos.Entidade
         public int RamalUsuario { get; set; }
         public string AssinaturaTexto { get; set; }
 
-        public Escritorio EscritorioUsuario { get; private set; }
-        public Setor SetorUsuario { get; private set; }
+        public int IdEscritorio { get; set; }
+        public Escritorio EscritorioUsuario { get; set; }
+
+        public int IdSetor { get; set; }
+        public Setor SetorUsuario { get; set; }
         
         //Configuração do Usuário
         public bool Administrador { get; set; }

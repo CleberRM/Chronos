@@ -12,11 +12,13 @@ namespace br.com.Chronos.Entidade
         public ProdutoCliente(Cliente cliente)
         {
             Cliente = cliente;
-            IdCliente = cliente.Id;
+            IdCliente = cliente.IdCliente;
         }
 
+        public int IdProdutoCliente { get; set; } 
+
         public int IdProduto { get; set; }
-        public Produto DescricaoProduto { get; set; }
+        public virtual Produto DescricaoProduto { get; set; }
 
         public int IdCliente { get; set; }
         public virtual Cliente Cliente { get; set; }

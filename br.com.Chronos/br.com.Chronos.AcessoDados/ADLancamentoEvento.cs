@@ -31,7 +31,7 @@ namespace br.com.Chronos.AcessoDados
         public LancamentoEvento RetornarEntidadePor(int id)
         {
             return (from c in _contexto.LancamentoEventos
-                    where c.Id == id
+                    where c.IdLancamento == id
                     select c).FirstOrDefault();
         }
 
@@ -42,7 +42,7 @@ namespace br.com.Chronos.AcessoDados
 
         public int Salvar(LancamentoEvento entidade)
         {
-            var result = RetornarEntidadePor(entidade.Id);
+            var result = RetornarEntidadePor(entidade.IdLancamento);
             if (result != null)
             {
                 _contexto.Entry(result).CurrentValues.SetValues(entidade);
@@ -52,7 +52,7 @@ namespace br.com.Chronos.AcessoDados
                 _contexto.LancamentoEventos.Add(entidade);
             }
             _contexto.SaveChanges();
-            return entidade.Id;
+            return entidade.IdLancamento;
         }
     }
 }

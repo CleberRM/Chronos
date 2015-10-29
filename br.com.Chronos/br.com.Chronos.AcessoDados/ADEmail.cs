@@ -31,7 +31,7 @@ namespace br.com.Chronos.AcessoDados
         public Email RetornarEntidadePor(int id)
         {
             return (from c in _contexto.Emails
-                    where c.Id == id
+                    where c.IdEmail == id
                     select c).FirstOrDefault();
         }
 
@@ -42,7 +42,7 @@ namespace br.com.Chronos.AcessoDados
 
         public int Salvar(Email entidade)
         {
-                var result = RetornarEntidadePor(entidade.Id);
+                var result = RetornarEntidadePor(entidade.IdEmail);
                 if (result != null)
                 {
                     _contexto.Entry(result).CurrentValues.SetValues(entidade);
@@ -52,7 +52,7 @@ namespace br.com.Chronos.AcessoDados
                     _contexto.Emails.Add(entidade);
                 }
                 _contexto.SaveChanges();
-                return entidade.Id;
+                return entidade.IdEmail;
         }
     }
 }

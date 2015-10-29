@@ -31,40 +31,27 @@ namespace br.com.Chronos.AcessoDados
         {
 
             modelBuilder.Entity<Cliente>().ToTable("Clientes")
-                .HasKey(x => x.Id)
+                .HasKey(x => x.IdCliente)
                 .HasMany(x => x.Contatos)
                 .WithRequired(x => x.Cliente)
-                .WillCascadeOnDelete(false);                
+                .HasForeignKey( x=> x.IdContato)
+                .WillCascadeOnDelete(false);
+
 
             modelBuilder.Entity<Cliente>().ToTable("Clientes")
                 .HasMany(x => x.ProdutosAdquiridos)
-                .WithRequired(x => x.Cliente);
-                        
-            modelBuilder.Entity<Cliente>().ToTable("Clientes")
-                .HasRequired(x => x.ResponsavelCriacao)
-                .WithMany()
-                .HasForeignKey(x => x.IdResponsavelCriacao)
-                .WillCascadeOnDelete(false);
-
+                .WithRequired(x => x.Cliente);                       
+            
             modelBuilder.Entity<Contato>().ToTable("Contatos")
-                .HasKey(x => x.Id)
+                .HasKey(x => x.IdContato)
                 .HasRequired(x => x.Cliente)
                 .WithMany()
                 .HasForeignKey(x => x.IdCliente)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Contato>().ToTable("Contatos")
-                .HasRequired(x => x.ResponsavelCriacao)
-                .WithMany()
-                .HasForeignKey(x => x.IdResponsavelCriacao)
-                    .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<ProdutoCliente>().ToTable("ProdutosCliente")
-                .HasKey(x => x.Id)
-                .HasRequired(x => x.ResponsavelCriacao)
-                .WithMany()
-                .HasForeignKey(x => x.IdResponsavelCriacao)
-                .WillCascadeOnDelete(false);
+                .HasKey(x => x.IdProdutoCliente);
+                
 
             modelBuilder.Entity<ProdutoCliente>().ToTable("ProdutosCliente")
                 .HasRequired(x => x.Cliente)
@@ -79,80 +66,44 @@ namespace br.com.Chronos.AcessoDados
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<DocumentosAnexos>().ToTable("DocumentosAnexosDaOS")
-                .HasKey(x => x.Id)
-                .HasRequired(x => x.ResponsavelCriacao)
-                .WithMany()
-                .HasForeignKey(x => x.IdResponsavelCriacao)
-                .WillCascadeOnDelete(false);
+                .HasKey(x => x.IdDocAnexos);
 
             modelBuilder.Entity<Escritorio>().ToTable("Escritorios")
-                .HasKey(x => x.Id)
-                .HasOptional(x => x.ResponsavelCriacao)
-                .WithMany()
-                .HasForeignKey(x => x.IdResponsavelCriacao);
+                .HasKey(x => x.IdEscritorio);
 
             modelBuilder.Entity<Evento>().ToTable("Eventos")
-                .HasKey(x => x.Id)
-                .HasRequired(x => x.ResponsavelCriacao)
-                .WithMany()
-                .HasForeignKey(x => x.IdResponsavelCriacao)
-                .WillCascadeOnDelete(false);
-
+                .HasKey(x => x.IdEvento);
 
             modelBuilder.Entity<FollowUpOSCliente>().ToTable("FollowUpOSClientes")
-                .HasKey(x => x.Id)
-                .HasRequired(x => x.ResponsavelCriacao)
-                .WithMany()
-                .HasForeignKey(x => x.IdResponsavelCriacao);
+                .HasKey(x => x.IdFollow);
 
             modelBuilder.Entity<LancamentoEvento>().ToTable("LancamentoEventos")
-                .HasKey(x => x.Id)
-                .HasRequired(x => x.ResponsavelEvento);
-            
-            modelBuilder.Entity<LancamentoEvento>().ToTable("LancamentoEventos")
-                .HasRequired(x => x.EventoLancado);
-
-            modelBuilder.Entity<LancamentoEvento>().ToTable("LancamentoEventos")
-                .HasRequired(x => x.ResponsavelCriacao)
+                .HasKey(x => x.IdLancamento)
+                .HasRequired(x => x.ResponsavelEvento)
                 .WithMany()
-                .HasForeignKey(x => x.IdResponsavelCriacao)
-                .WillCascadeOnDelete(false);
+                .HasForeignKey(x => x.IdEventoLancado);
 
             modelBuilder.Entity<Email>().ToTable("Emails")
-                .HasKey(x => x.Id)
-                .HasRequired(x => x.ResponsavelCriacao)
-                .WithMany()
-                .HasForeignKey(x => x.IdResponsavelCriacao)
-                .WillCascadeOnDelete(false);
-
+                .HasKey(x => x.IdEmail);
+                
             modelBuilder.Entity<Modalidade>().ToTable("ModalidadesDaOS")
-                .HasRequired(x => x.ResponsavelCriacao)
-                .WithMany()
-                .HasForeignKey(x => x.IdResponsavelCriacao)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Modalidade>().ToTable("ModalidadesDaOS")
+                .HasKey( x => x.IdModalidade)
                 .HasRequired(x => x.DescricaoProduto)
                 .WithMany()
                 .HasForeignKey(x => x.IdProduto)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Produto>().ToTable("Produtos")
-                .HasKey(x => x.Id)
-                .HasRequired(x => x.ResponsavelCriacao)
-                .WithMany()
-                .HasForeignKey(x => x.IdResponsavelCriacao)
-                .WillCascadeOnDelete(false);
+                .HasKey(x => x.IdProduto);
 
             modelBuilder.Entity<MotivoOS>().ToTable("MotivosDaOS")
-                .HasRequired(x => x.ResponsavelCriacao)
-                .WithMany()
-                .HasForeignKey(X => X.IdResponsavelCriacao)
-                .WillCascadeOnDelete(false);
+                .HasKey(x => x.IdMotivo);
 
             modelBuilder.Entity<OrdemDeServico>().ToTable("OrdemDeServicos")
-                .HasKey(x => x.Id)
-                .HasRequired(x => x.clienteOS);
+                .HasKey(x => x.IdOrdemServico)
+                .HasRequired(x => x.clienteOS)
+                .WithMany()
+                .HasForeignKey(x => x.clienteOS);
 
             modelBuilder.Entity<OrdemDeServico>().ToTable("OrdemDeServicos")
                 .HasMany(x => x.EventosDaOS)
@@ -190,26 +141,12 @@ namespace br.com.Chronos.AcessoDados
                 .HasForeignKey(x => x.IdOrdemServico)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<OrdemDeServico>().ToTable("OrdemDeServicos")
-                .HasRequired(x => x.ResponsavelCriacao)
-                .WithMany()
-                .HasForeignKey(x => x.IdResponsavelCriacao)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<Setor>().ToTable("Setores")
-                .HasKey(x => x.Id)
-                .HasRequired(x => x.ResponsavelCriacao)
-                .WithMany()
-                .HasForeignKey(x => x.IdResponsavelCriacao)
-                .WillCascadeOnDelete(false);
+                .HasKey(x => x.IdSetor);
 
             modelBuilder.Entity<Usuario>().ToTable("Usuarios")
-                .HasKey(x => x.Id)
-                .HasOptional(x => x.ResponsavelCriacao)
-                .WithMany()
-                .HasForeignKey(x => x.IdResponsavelCriacao)
-                .WillCascadeOnDelete(false);
-
+                .HasKey(x => x.IdUsuario);
+                
             
         }
     }

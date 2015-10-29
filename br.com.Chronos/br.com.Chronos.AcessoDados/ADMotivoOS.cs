@@ -31,7 +31,7 @@ namespace br.com.Chronos.AcessoDados
         public MotivoOS RetornarEntidadePor(int id)
         {
             return (from c in _contexto.MotivosOS
-                    where c.Id == id
+                    where c.IdMotivo == id
                     select c).FirstOrDefault();
         }
 
@@ -42,7 +42,7 @@ namespace br.com.Chronos.AcessoDados
 
         public int Salvar(MotivoOS entidade)
         {
-            var result = RetornarEntidadePor(entidade.Id);
+            var result = RetornarEntidadePor(entidade.IdMotivo);
             if (result !=null)
             {
                 _contexto.Entry(result).CurrentValues.SetValues(entidade);
@@ -52,7 +52,7 @@ namespace br.com.Chronos.AcessoDados
                 _contexto.MotivosOS.Add(entidade);
             }
             _contexto.SaveChanges();
-            return entidade.Id;
+            return entidade.IdMotivo;
         }
     }
 }

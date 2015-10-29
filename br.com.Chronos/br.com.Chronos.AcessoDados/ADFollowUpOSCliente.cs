@@ -31,7 +31,7 @@ namespace br.com.Chronos.AcessoDados
         public FollowUpOSCliente RetornarEntidadePor(int id)
         {
             return (from c in _contexto.FollowUpOSClientes
-                    where c.Id == id
+                    where c.IdFollow == id
                     select c).FirstOrDefault();
         }
 
@@ -42,7 +42,7 @@ namespace br.com.Chronos.AcessoDados
 
         public int Salvar(FollowUpOSCliente entidade)
         {
-            var result = RetornarEntidadePor(entidade.Id);
+            var result = RetornarEntidadePor(entidade.IdFollow);
             if (result != null)
             {
                 _contexto.Entry(result).CurrentValues.SetValues(entidade);
@@ -52,7 +52,7 @@ namespace br.com.Chronos.AcessoDados
                 _contexto.FollowUpOSClientes.Add(entidade);
             }
             _contexto.SaveChanges();
-            return entidade.Id;
+            return entidade.IdFollow;
         }
     }
 }

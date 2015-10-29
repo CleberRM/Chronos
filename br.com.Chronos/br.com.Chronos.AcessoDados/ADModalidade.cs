@@ -31,7 +31,7 @@ namespace br.com.Chronos.AcessoDados
         public Modalidade RetornarEntidadePor(int id)
         {
             return (from c in _contexto.Modalidades
-                    where c.Id == id
+                    where c.IdModalidade == id
                     select c).FirstOrDefault();
         }
 
@@ -42,7 +42,7 @@ namespace br.com.Chronos.AcessoDados
 
         public int Salvar(Modalidade entidade)
         {
-            var result = RetornarEntidadePor(entidade.Id);
+            var result = RetornarEntidadePor(entidade.IdModalidade);
             if (result != null)
             {
                 _contexto.Entry(result).CurrentValues.SetValues(entidade);
@@ -52,7 +52,7 @@ namespace br.com.Chronos.AcessoDados
                 _contexto.Modalidades.Add(entidade);
             }
             _contexto.SaveChanges();
-            return entidade.Id;
+            return entidade.IdModalidade;
         }
     }
 }

@@ -19,6 +19,8 @@ namespace br.com.Chronos.Entidade
             
         }
 
+
+
         public List<LancamentoEvento> EventosDaOS { get; set; }
         public List<Modalidade> ModalidadeDaOS { get; set; }
         public List<Email> Emails { get; set; }
@@ -27,7 +29,9 @@ namespace br.com.Chronos.Entidade
         public List<FollowUpOSCliente> FollowCliente { get; set; }
 
 
+        public int IdOrdemServico { get; set; }
         public string NumeroOS { get; set; }
+
         public Cliente clienteOS { get; set; }
         public int NivelDaOS { get; set; } 
         public string NomeDocumento { get; set; }
@@ -38,6 +42,7 @@ namespace br.com.Chronos.Entidade
         public string DescricaoOS { get; set; }
         public string ObservacaoOS { get; set; }
         public int TipoDeContato { get; set; }
+        public string ResponsavelCriacao { get; set; }
     }
 
 }   

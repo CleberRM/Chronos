@@ -12,6 +12,8 @@ namespace br.com.Chronos.Entidade
     public class Setor : AEntidade
     {
         [Display(ResourceType = typeof(Language), Name = "Descricao")]
+
+        public int IdSetor { get; set; }
         public string Descricao { get; set; }        
     }
 }

@@ -11,16 +11,26 @@ namespace br.com.Chronos.Entidade
         public LancamentoEvento(Evento evento)
         {
             EventoLancado = evento;
+            DataCriacaoEvento = DateTime.Now;
         }
 
-       
-        public Evento EventoLancado { get; private set; }
-        public Usuario ResponsavelCriacaoEvento { get; set; } 
-        public Usuario ResponsavelEvento { get; set; }
+        public int IdLancamento { get; set; }
+
+        public int IdEventoLancado { get; set; }
+        public virtual Evento EventoLancado { get; set; }
+
+        public int IdResponsavelCriacao { get; set; }
+        public virtual Usuario ResponsavelCriacaoEvento { get; set; }
+
+        public int IdResponsavelEvento { get; set; }
+        public virtual Usuario ResponsavelEvento { get; set; }
+
         public DateTime DataCriacaoEvento { get; set; }
         public DateTime DataPrevistaConclusao { get; set; }
         public DateTime DataConclusao { get; set; }
+
         public string StatusEvento { get; set; }
+
         public int IdOrdemServico { get; set; }
         public virtual OrdemDeServico OrdemServico { get; set; }
     }

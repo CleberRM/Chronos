@@ -31,7 +31,7 @@ namespace br.com.Chronos.AcessoDados
         public DocumentosAnexos RetornarEntidadePor(int id)
         {
             return (from c in _contexto.DocumentosAnexosDaOS
-                    where c.Id == id
+                    where c.IdDocAnexos == id
                     select c).FirstOrDefault();
         }
 
@@ -42,7 +42,7 @@ namespace br.com.Chronos.AcessoDados
 
         public int Salvar(DocumentosAnexos entidade)
         {
-            var result = RetornarEntidadePor(entidade.Id);
+            var result = RetornarEntidadePor(entidade.IdDocAnexos);
             if (result != null)
             {
                 _contexto.Entry(entidade).CurrentValues.SetValues(entidade);
@@ -52,7 +52,7 @@ namespace br.com.Chronos.AcessoDados
                 _contexto.DocumentosAnexosDaOS.Add(entidade);
             }
             _contexto.SaveChanges();
-            return entidade.Id;
+            return entidade.IdDocAnexos;
         }
     }
 }

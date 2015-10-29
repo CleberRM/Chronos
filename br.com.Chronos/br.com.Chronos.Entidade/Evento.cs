@@ -9,6 +9,7 @@ namespace br.com.Chronos.Entidade
 {
     public class Evento : AEntidade
     {
+        public int IdEvento {get; set;}
         public string Descricao { get; set; }
         public string CorHexadecimal { get; set; }
     }

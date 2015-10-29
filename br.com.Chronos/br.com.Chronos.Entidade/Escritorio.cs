@@ -8,6 +8,7 @@ namespace br.com.Chronos.Entidade
 {
     public class Escritorio : AEntidade
     {
+        public int IdEscritorio { get; set; }
         public int Cnpj { get; set; }
         public int InscricaoEstadual { get; set; }
         public int InscricaoMunicipal { get; set; }
@@ -22,6 +23,7 @@ namespace br.com.Chronos.Entidade
         public int Telefone { get; set; }
         public int Fax { get; set; }
         public string Site { get; set; }
+        public string ResponsavelCriacao { get; set; }
         
     }
 }

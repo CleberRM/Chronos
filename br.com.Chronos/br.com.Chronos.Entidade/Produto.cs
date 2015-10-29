@@ -8,6 +8,7 @@ namespace br.com.Chronos.Entidade
 {
     public class Produto : AEntidade
     {
+        public int IdProduto { get; set; }
         public string Descricao { get; set; }
         
     }

@@ -12,10 +12,8 @@ namespace br.com.Chronos.Entidade
     public abstract class AEntidade
     {
         
-        public int Id { get; set; }
-        public virtual Usuario ResponsavelCriacao { get; set; }
         public DateTime DataCriacao { get; set; }
-        public int IdResponsavelCriacao { get; set; }
+        
 
         public AEntidade()
         {

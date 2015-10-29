@@ -21,6 +21,8 @@ namespace br.com.Chronos.Entidade
         public List<Contato> Contatos { get; set; }
         public List<ProdutoCliente> ProdutosAdquiridos { get; set; }
 
+        public int IdCliente { get; set; }
+
         [Display(ResourceType = typeof(Language), Name = "NomeReduzido")]
         public string NomeReduzido { get; set; }
         public string NomeCompleto { get; set; }

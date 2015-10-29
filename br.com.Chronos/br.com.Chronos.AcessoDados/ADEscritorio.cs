@@ -31,7 +31,7 @@ namespace br.com.Chronos.AcessoDados
         public Escritorio RetornarEntidadePor(int id)
         {
             return (from c in _contexto.Escritorios
-                    where c.Id == id
+                    where c.IdEscritorio == id
                     select c).FirstOrDefault();
         }
 
@@ -42,7 +42,7 @@ namespace br.com.Chronos.AcessoDados
 
         public int Salvar(Escritorio entidade)
         {
-            var result = RetornarEntidadePor(entidade.Id);
+            var result = RetornarEntidadePor(entidade.IdEscritorio);
             if (result != null)
             {
                 _contexto.Entry(result).CurrentValues.SetValues(entidade);
@@ -52,7 +52,7 @@ namespace br.com.Chronos.AcessoDados
                 _contexto.Escritorios.Add(entidade);
             }
             _contexto.SaveChanges();
-            return entidade.Id;
+            return entidade.IdEscritorio;
         }
     }
 }

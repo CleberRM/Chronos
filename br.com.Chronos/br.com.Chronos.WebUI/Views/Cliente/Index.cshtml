@@ -48,10 +48,10 @@
 
             @*//NomeReduzido*@
             <div class="col-md-12 form-group">
-                @Html.LabelFor(model => model.Id, htmlAttributes: new { @class = "control-label col-md-1" })
+                @Html.LabelFor(model => model.IdCliente, htmlAttributes: new { @class = "control-label col-md-1" })
                 <div class=" col-md-2 col-md-offset-1">
-                    @Html.EditorFor(model => model.Id, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.IdCliente, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.IdCliente, "", new { @class = "text-danger" })
                 </div>
                 @Html.LabelFor(model => model.NomeReduzido, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-6">

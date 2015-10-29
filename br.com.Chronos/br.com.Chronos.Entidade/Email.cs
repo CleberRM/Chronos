@@ -10,6 +10,7 @@ namespace br.com.Chronos.Entidade
     {
         public enum TipoMensagem { ENVIADO=1, RECEBIDO=2 };
 
+        public int IdEmail { get; set; }
         public string Remetente { get; set; }
         public string Destinatario { get; set; }
         public string ComCopia { get; set; }
@@ -19,6 +20,6 @@ namespace br.com.Chronos.Entidade
         public TipoMensagem Mensagem { get; set; }
 
         public int IdOrdemServico { get; set; }
-        public virtual OrdemDeServico OrdemServico { get; set; }
+        public OrdemDeServico OrdemServico { get; set; }
     }
 }

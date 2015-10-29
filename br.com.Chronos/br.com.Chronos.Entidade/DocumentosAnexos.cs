@@ -8,6 +8,7 @@ namespace br.com.Chronos.Entidade
 {
     public class DocumentosAnexos : AEntidade
     {
+        public int IdDocAnexos { get; set; }
         public string NomeDocumento {get; set;}
         public string CaminhoDocumento { get; set; }
         public int IdOrdemServico { get; set; }

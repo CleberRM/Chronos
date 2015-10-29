@@ -31,7 +31,7 @@ namespace br.com.Chronos.AcessoDados
         public Contato RetornarEntidadePor(int id)
         {
             return (from c in _contexto.Contatos
-                    where c.Id == id
+                    where c.IdContato == id
                     select c).FirstOrDefault();
         }
 
@@ -42,7 +42,7 @@ namespace br.com.Chronos.AcessoDados
 
         public int Salvar(Contato entidade)
         {
-            var result = RetornarEntidadePor(entidade.Id);
+            var result = RetornarEntidadePor(entidade.IdContato);
             if (result != null)
             {
                 _contexto.Entry(result).CurrentValues.SetValues(entidade);
@@ -52,7 +52,7 @@ namespace br.com.Chronos.AcessoDados
                 _contexto.Contatos.Add(entidade);
             }
             _contexto.SaveChanges();
-            return entidade.Id;
+            return entidade.IdContato;
         }
     }
 }

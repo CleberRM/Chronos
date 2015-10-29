@@ -12,10 +12,11 @@ namespace br.com.Chronos.Entidade
         public Contato(Cliente cliente)
         {
             this.Cliente = cliente;
-            this.IdCliente = cliente.Id;
+            this.IdCliente = cliente.IdCliente;
 
         }
 
+        public int IdContato { get; set; }
         public string NomeContato { get; set; }
         public string TelefoneContato { get; set; }
         public string CelularContato { get; set; }
