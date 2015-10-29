@@ -32,6 +32,7 @@ namespace br.com.Chronos.Entidade
         public int IdOrdemServico { get; set; }
         public string NumeroOS { get; set; }
 
+        public int IdCliente { get; set; }
         public Cliente clienteOS { get; set; }
         public int NivelDaOS { get; set; } 
         public string NomeDocumento { get; set; }

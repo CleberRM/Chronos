@@ -34,7 +34,6 @@ namespace br.com.Chronos.AcessoDados
                 .HasKey(x => x.IdCliente)
                 .HasMany(x => x.Contatos)
                 .WithRequired(x => x.Cliente)
-                .HasForeignKey( x=> x.IdContato)
                 .WillCascadeOnDelete(false);
 
 
@@ -103,7 +102,7 @@ namespace br.com.Chronos.AcessoDados
                 .HasKey(x => x.IdOrdemServico)
                 .HasRequired(x => x.clienteOS)
                 .WithMany()
-                .HasForeignKey(x => x.clienteOS);
+                .HasForeignKey(x => x.IdCliente); 
 
             modelBuilder.Entity<OrdemDeServico>().ToTable("OrdemDeServicos")
                 .HasMany(x => x.EventosDaOS)
