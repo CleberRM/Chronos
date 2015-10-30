@@ -79,11 +79,47 @@ namespace br.com.Chronos.Idioma.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Data Conclusão.
+        /// </summary>
+        public static string DataConclusaoOS {
+            get {
+                return ResourceManager.GetString("DataConclusaoOS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data Criação .
+        /// </summary>
+        public static string DataCriacao {
+            get {
+                return ResourceManager.GetString("DataCriacao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data Vencimento.
+        /// </summary>
+        public static string DataVencimentoOS {
+            get {
+                return ResourceManager.GetString("DataVencimentoOS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Descrição.
         /// </summary>
         public static string Descricao {
             get {
                 return ResourceManager.GetString("Descricao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Descrição.
+        /// </summary>
+        public static string DescricaoOS {
+            get {
+                return ResourceManager.GetString("DescricaoOS", resourceCulture);
             }
         }
         
@@ -106,11 +142,38 @@ namespace br.com.Chronos.Idioma.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Id.
+        /// </summary>
+        public static string IdSetor {
+            get {
+                return ResourceManager.GetString("IdSetor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
         public static string Login {
             get {
                 return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nivel.
+        /// </summary>
+        public static string NivelDaOS {
+            get {
+                return ResourceManager.GetString("NivelDaOS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome Documento.
+        /// </summary>
+        public static string NomeDocumento {
+            get {
+                return ResourceManager.GetString("NomeDocumento", resourceCulture);
             }
         }
         
@@ -129,6 +192,51 @@ namespace br.com.Chronos.Idioma.Resources {
         public static string NomeReduzido {
             get {
                 return ResourceManager.GetString("NomeReduzido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nr. OS.
+        /// </summary>
+        public static string NumeroOS {
+            get {
+                return ResourceManager.GetString("NumeroOS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Observação.
+        /// </summary>
+        public static string ObservacaoOS {
+            get {
+                return ResourceManager.GetString("ObservacaoOS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ref. Exemplo.
+        /// </summary>
+        public static string ReferenciaExemplo {
+            get {
+                return ResourceManager.GetString("ReferenciaExemplo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resp. Conclusão.
+        /// </summary>
+        public static string ResponsavelConclusaoOS {
+            get {
+                return ResourceManager.GetString("ResponsavelConclusaoOS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resp. Criação.
+        /// </summary>
+        public static string ResponsavelCriacao {
+            get {
+                return ResourceManager.GetString("ResponsavelCriacao", resourceCulture);
             }
         }
         

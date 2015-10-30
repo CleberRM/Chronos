@@ -30,241 +30,224 @@
 </div>
 <div class="tab-content">
     <div id="DadosPrincipais" class="tab-pane fade in active">
-        
-            <div class="col-md-6 form-group">
-                <div id="courier" class="panel panel-default">
 
-                    <div class="panel-heading">Cliente</div>
-                    <div class="panel-body">
-                        <div class="col-md-12 form-group">
-                            <label class="col-md-2 control-label">Cliente:</label>
-                            <div class="col-md-2">
-                                <input name="" type="text" class="form-control autocompletecad" data-registercode="1" data-namefield="shippername" data-campotabulacao="CodigoConsignee" />
-                            </div>
-                            <div class="col-md-1">
-                                <input type="button" class="btn smallbutton opendialog" data-registertype="Shipper" data-registercode="1" data-codefield="CodigoShipper" data-namefield="shippername" />
-                            </div>
-                            <div class="col-md-7">
-                                <input name="" type="text" class="form-control" readonly="readonly" />
-                            </div>
+        <div class="col-md-6 form-group">
+            <div id="courier" class="panel panel-default">
+
+                <div class="panel-heading">Cliente</div>
+                <div class="panel-body">
+                    <div class="col-md-12 form-group">
+                        <label class="col-md-2 control-label">Cliente:</label>
+                        <div class="col-md-2">
+                            <input name="" type="text" class="form-control autocompletecad" data-registercode="1" data-namefield="shippername" data-campotabulacao="CodigoConsignee" />
                         </div>
-                        <div class="col-md-12 form-group">
-                            <label class="col-md-2 control-label">Conexão:</label>
-                            <div class="col-md-1">
-                                <input type="button" class="btn smallbutton opendialog" data-registertype="Shipper" data-registercode="1" data-codefield="CodigoShipper" data-namefield="shippername" />
-                            </div>
-                            <div class="col-md-9">
-                                <input name="" type="text" class="form-control" readonly="readonly" />
-                            </div>
+                        <div class="col-md-1">
+                            <input type="button" class="btn smallbutton opendialog" data-registertype="Shipper" data-registercode="1" data-codefield="CodigoShipper" data-namefield="shippername" />
                         </div>
-                        <div class="col-md-12 form-group">
-                            <label class="col-md-2 control-label">Observação:</label>
-                            <div class="col-md-10">
-                                <input name="" type="text" class="form-control" readonly="readonly" style="height:50px;" />
-                            </div>
+                        <div class="col-md-7">
+                            <input name="" type="text" class="form-control" readonly="readonly" />
+                        </div>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <label class="col-md-2 control-label">Conexão:</label>
+                        <div class="col-md-1">
+                            <input type="button" class="btn smallbutton opendialog" data-registertype="Shipper" data-registercode="1" data-codefield="CodigoShipper" data-namefield="shippername" />
+                        </div>
+                        <div class="col-md-9">
+                            <input name="" type="text" class="form-control" readonly="readonly" />
+                        </div>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <label class="col-md-2 control-label">Observação:</label>
+                        <div class="col-md-10">
+                            <input name="" type="text" class="form-control" readonly="readonly" style="height:50px;" />
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="col-md-6 form-group">
-                <div class="panel panel-default">
-                    <div class="panel-heading" style="">Contatos<input type="button" class="btn rectanglesmallbutton pull-right" id="cmdAdicionarItem" alt="Add a new Item" /></div>
-                    <div class="panel-body">
-                        <div class="col-md-12 form-group" id="scrolltabela">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>Nome</th>
-                                        <th>Setor</th>
-                                        <th>Email</th>
-                                        <th>Fone</th>
-                                        <th>Ramal</th>
+        <div class="col-md-6 form-group">
+            <div class="panel panel-default" style="">
+                <div class="panel-heading" style="">Contatos<input type="button" class="btn rectanglesmallbutton pull-right" id="cmdAdicionarItem" alt="Add a new Item" /></div>
+                <div class="panel-body" style="height:192px">
+                    <div class="col-md-12 form-group" id="scrolltabela">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Nome</th>
+                                    <th>Setor</th>
+                                    <th>Email</th>
+                                    <th>Fone</th>
+                                    <th>Ramal</th>
 
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
 
-                                        <td><input class='itemdelete' type='button' /></td>
-                                        <td>Nome Contato</td>
-                                        <td>Setor Contato</td>
-                                        <td>Email Contato</td>
-                                        <td>99 9999-9999</td>
-                                        <td>999</td>
+                                    <td><input class='itemdelete' type='button' /></td>
+                                    <td>Nome Contato</td>
+                                    <td>Setor Contato</td>
+                                    <td>Email Contato</td>
+                                    <td>99 9999-9999</td>
+                                    <td>999</td>
 
-                                    </tr>
-
-                                    <tr>
-
-                                        <td><input class='itemdelete' type='button' /></td>
-                                        <td>Nome Contato</td>
-                                        <td>Setor Contato</td>
-                                        <td>Email Contato</td>
-                                        <td>99 9999-9999</td>
-                                        <td>999</td>
-
-                                    </tr>
-
-                                    <tr>
-
-                                        <td><input class='itemdelete' type='button' /></td>
-                                        <td>Nome Contato</td>
-                                        <td>Setor Contato</td>
-                                        <td>Email Contato</td>
-                                        <td>99 9999-9999</td>
-                                        <td>999</td>
-
-                                    </tr>
-                                </tbody>
+                                </tr>
 
 
-                            </table>
-                        </div>
+                            </tbody>
+
+
+                        </table>
                     </div>
                 </div>
             </div>
-            <div class="col-md-12 form-group">
-                @Html.LabelFor(model => model.DataCriacao, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.DataCriacao, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.DataCriacao, "", new { @class = "text-danger" })
-                </div>
+        </div>
+        <div class="col-md-12 form-group">
+            @Html.LabelFor(model => model.DataCriacao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.DataCriacao, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DataCriacao, "", new { @class = "text-danger" })
             </div>
 
-            <div class="col-md-12 form-group">
-                @Html.LabelFor(model => model.ResponsavelCriacao, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.ResponsavelCriacao, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.ResponsavelCriacao, "", new { @class = "text-danger" })
-                </div>
+            @Html.LabelFor(model => model.ResponsavelCriacao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.ResponsavelCriacao, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ResponsavelCriacao, "", new { @class = "text-danger" })
             </div>
 
-            <div class="col-md-12 form-group">
-                @Html.LabelFor(model => model.NivelDaOS, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-1">
-                    @Html.DropDownListFor(model => model.NivelDaOS, new SelectList(
-                                new List<Object> {
+            @Html.LabelFor(model => model.NivelDaOS, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.DropDownListFor(model => model.NivelDaOS, new SelectList(
+                 new List<Object> {
                                    new {value =1,text="Nivel 1"},
                                    new {value =2,text="Nivel 2"},
                                    new {value =3,text="Nivel 3"},
                                    new {value =4,text="Nivel 4"},
-                                   new {value =5,text="Nivel 5"} }, "value", "text", 1), htmlAttributes: new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.NivelDaOS, "", new { @class = "text-danger" })
-                </div>
+                                   new {value =5,text="Nivel 5"} }, "value", "text", 1), new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.NivelDaOS, "", new { @class = "text-danger" })
             </div>
-
-            <div class="col-md-12 form-group">
-                @Html.LabelFor(model => model.NomeDocumento, new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.NomeDocumento, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.NomeDocumento, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.ReferenciaExemplo, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.ReferenciaExemplo, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.ReferenciaExemplo, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.DataVencimentoOS, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.DataVencimentoOS, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.DataVencimentoOS, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.DataConclusaoOS, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.DataConclusaoOS, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.DataConclusaoOS, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.DescricaoOS, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.DescricaoOS, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.DescricaoOS, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.ObservacaoOS, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.ObservacaoOS, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.ObservacaoOS, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.TipoDeContato, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.TipoDeContato, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.TipoDeContato, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
         </div>
-    
-                    <div id="Eventos" class="tab-pane">
-                        <div>Teste</div>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>Setor</th>
-                                        <th>Criado por</th>
-                                        <th>Data/Hora Evento</th>
-                                        <th>Previsão Conclusão</th>
-                                        <th>Evento Para</th>
-                                        <th>Data/Hora Conclusão</th>
-                                        <th>Status Evento</th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                    <tr style="background:#9cb1bf;color:black;">
-                                        <td>Desenvolvimento</td>
-                                        <td>Guilherme Massi</td>
-                                        <td>22/10/2015 17:30:00</td>
-                                        <td>25/10/2015 17:30:00</td>
-                                        <td>Guilherme Massi</td>
-                                        <td></td>
-                                        <td>Em Andamento</td>
-                                    </tr>
 
 
+        <div class="col-md-12 form-group">
+            @Html.LabelFor(model => model.NomeDocumento, new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.NomeDocumento, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NomeDocumento, "", new { @class = "text-danger" })
+            </div>
 
-                                </tbody>
-                            </table>
+            @Html.LabelFor(model => model.ReferenciaExemplo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.ReferenciaExemplo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ReferenciaExemplo, "", new { @class = "text-danger" })
+            </div>
+
+            @Html.LabelFor(model => model.DataVencimentoOS, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.DataVencimentoOS, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DataVencimentoOS, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="col-md-12 form-group">
+
+
+            @Html.LabelFor(model => model.DataConclusaoOS, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.DataConclusaoOS, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DataConclusaoOS, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        
+        
+            <div class="form-horizontal">
+
+
+                <ul class="nav nav-pills nav-justified nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#Descricao">Dados Principais</a></li>
+                    <li><a data-toggle="tab" href="#Observacao">Eventos</a></li>
+                </ul>
+
+            </div>
+            <div class="tab-content">
+                <div id="Descricao" class="tab-pane fade in active">
+                    <div class="col-md-12 form-group">
+                        @*@Html.LabelFor(model => model.DescricaoOS, htmlAttributes: new { @class = "col-md-2 control-label" })*@
+                        <div class="col-md-12">
+                            @*@Html.EditorFor(model => model.DescricaoOS, new { htmlAttributes = new { @class = "form-control" } })*@
+                            <input name="LastActivityDate" class="form-control" id="DescricaoOS" style="height:50px;" type="text" value="" />
+                            @Html.ValidationMessageFor(model => model.DescricaoOS, "", new { @class = "text-danger" })
                         </div>
                     </div>
-
-                    <div id="DocAnexos" class="tab-pane">
-                        <h3>Documentos Anexos</h3>
-                        <p>Em construção</p>
-                    </div>
-
-                    <div id="Emails" class="tab-pane">
-                        <h3>Emails</h3>
-                        <p>Em construção</p>
-                    </div>
-
-
-
                 </div>
+                <div id="Observacao" class="tab-pane">
+                    <div class="col-md-12 form-group">
+                        @*@Html.LabelFor(model => model.ObservacaoOS, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        <div class="col-md-12">
+                            @*@Html.EditorFor(model => model.ObservacaoOS, new { htmlAttributes = new { @class = "form-control" } })*@
+                            <input name="LastActivityDate" class="form-control" id="ObservacaoOS" style="height:50px;" type="text" value="" />
+                            @Html.ValidationMessageFor(model => model.ObservacaoOS, "", new { @class = "text-danger" })
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div id="Eventos" class="tab-pane">
+                <div>Teste</div>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>Setor</th>
+                                <th>Criado por</th>
+                                <th>Data/Hora Evento</th>
+                                <th>Previsão Conclusão</th>
+                                <th>Evento Para</th>
+                                <th>Data/Hora Conclusão</th>
+                                <th>Status Evento</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr style="background:#9cb1bf;color:black;">
+                                <td>Desenvolvimento</td>
+                                <td>Guilherme Massi</td>
+                                <td>22/10/2015 17:30:00</td>
+                                <td>25/10/2015 17:30:00</td>
+                                <td>Guilherme Massi</td>
+                                <td></td>
+                                <td>Em Andamento</td>
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="DocAnexos" class="tab-pane">
+                <h3>Documentos Anexos</h3>
+                <p>Em construção</p>
+            </div>
+
+            <div id="Emails" class="tab-pane">
+                <h3>Emails</h3>
+                <p>Em construção</p>
+            </div>
+
+
+
+        </div>
 
 
 
 
-                <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-                <script src="~/Scripts/jquery.validate.min.js"></script>
-                <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

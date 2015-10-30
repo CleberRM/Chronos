@@ -11,9 +11,10 @@ namespace br.com.Chronos.Entidade
 {
     public class Setor : AEntidade
     {
-        [Display(ResourceType = typeof(Language), Name = "Descricao")]
-
+        [Display(ResourceType = typeof(Language), Name = "IdSetor")]
         public int IdSetor { get; set; }
+
+        [Display(ResourceType = typeof(Language), Name = "Descricao")]
         public string Descricao { get; set; }
         public string ResponsavelCriacao { get; set; }
     }
